@@ -11,10 +11,9 @@ import {
     LockClosedIcon,
     MoonIcon,
     HomeModernIcon,
-
 } from '@heroicons/react/24/outline'
 import { NavLink } from 'react-router-dom';
-
+import logo from '../../assets/images/logo.png'
 
 import MenuItem from "./MenuItem";
 
@@ -84,7 +83,11 @@ const Sidebar = ({ children }) => {
                                 </div>
                             </Transition.Child>
                             <div className="flex-shrink-0 flex items-center px-4">
-                                <h2>Fidixus</h2>
+                                <img
+                                    className="h-8 w-auto"
+                                    src="https://tailwindui.com/img/logos/workflow-logo-blue-300-mark-white-text.svg"
+                                    alt="Workflow"
+                                />
                             </div>
                             <nav
                                 className="mt-5 flex-shrink-0 h-full divide-y divide-blue-800 overflow-y-auto"
@@ -92,13 +95,13 @@ const Sidebar = ({ children }) => {
                             >
                                 <div className="px-2 space-y-1">
                                     {navigation.map((item, index) => (
-                                       <MenuItem item={item} key={index} />
+                                        <MenuItem item={item}/>
                                     ))}
                                 </div>
                                 <div className="mt-6 pt-6">
                                     <div className="px-2 space-y-1">
                                         {secondaryNavigation.map((item) => (
-                                            <MenuItem item={item} key={item.name} />
+                                            <MenuItem item={item}/>
                                         ))}
                                     </div>
                                 </div>
@@ -117,19 +120,23 @@ const Sidebar = ({ children }) => {
                 <div className="flex flex-col flex-grow bg-blue-700 pt-5 pb-4 overflow-y-auto">
                     <div className="px-4">
                         <div className="flex items-center">
-                            <h2 className='p-5 text-center font-bold text-xl text-white'>Fidixis</h2>
+                            <img
+                                className="h-8 w-auto"
+                                src={logo}
+                                alt="Workflow"
+                            />
                         </div>
                     </div>
                     <nav className="mt-5 flex-1 flex flex-col divide-y divide-blue-800 overflow-y-auto" aria-label="Sidebar">
                         <div className="px-2 space-y-1">
-                            {navigation.map((item,index) => (
-                                <MenuItem item={item} key={index} />
+                            {navigation.map((item, index) => (
+                                <MenuItem item={item}/>
                             ))}
                         </div>
                         <div className="mt-6 pt-6">
                             <div className="px-2 space-y-1">
                                 {secondaryNavigation.map((item) => (
-                                    <MenuItem item={item} key={item.name} />
+                                    <MenuItem item={item}/>
                                 ))}
                             </div>
                         </div>

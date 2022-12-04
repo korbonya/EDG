@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-const MenuItem = ({ item, key }) => {
+const MenuItem = ({ item }) => {
     return (
         <NavLink
-            key={key}
             to={item.href}
             className={({ isActive }) =>
                 isActive ? 'bg-blue-800 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md' : 'text-blue-100 hover:text-white hover:bg-blue-600 group flex items-center px-2 py-2 text-base font-medium rounded-md'
