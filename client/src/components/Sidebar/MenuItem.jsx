@@ -1,9 +1,15 @@
 import { NavLink } from "react-router-dom";
 
-const MenuItem = ({ to, children }) => {
+const MenuItem = ({ to, name, icon }) => {
     return (
-        <NavLink to={to} className={({ isActive }) => `flex items-center px-3 py-2 text-gray-500 transition-colors duration-200 transform rounded-md hover:bg-gray-700 ${isActive ? 'bg-gray-800 text-white' : ''}`}>
-            {children}
+        <NavLink
+            key={name}
+            to={to}
+            className={({ isActive }) =>
+                isActive ? 'bg-red-800 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md' : 'text-red-100 hover:text-white hover:bg-red-600 group flex items-center px-2 py-2 text-base font-medium rounded-md'
+            }
+        >
+            {name}
         </NavLink>
     );
 }
