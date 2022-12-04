@@ -1,4 +1,5 @@
 import React from 'react'
+import Sidebar from '../../components/Sidebar'
 
 export default function index() {
   return (
@@ -6,15 +7,7 @@ export default function index() {
         <h1 className="text-3xl text-fuchsia-600 font-bold underline">
             Hello world!
         </h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-            Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-            Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-            Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-            Quisquam, quae. Quisquam, quae. Quisquam, quae. Quisquam, quae.
-            
-        </p>
+        <Sidebar />
     </div>
   )
 }
