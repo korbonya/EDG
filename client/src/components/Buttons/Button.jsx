@@ -20,3 +20,5 @@ const Button = ({ children, onClick, className, disabled }) => {
         </button>
     );
 }
+
+export default Button;
