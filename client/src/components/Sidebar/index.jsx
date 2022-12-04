@@ -3,7 +3,6 @@ import { Fragment, useState, lazy } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import {
     CogIcon,
-    CreditCardIcon,
     HomeIcon,
     QuestionMarkCircleIcon,
     ScaleIcon,
@@ -24,15 +23,15 @@ const classNames = (...classes) => {
 }
 
 const navigation = [
-    { end: true, name: 'Tableau de board', href: 'dashboard', icon: HomeIcon, current: true },
+    { end: true, name: 'Tableau de board', href: '/', icon: HomeIcon, current: true },
     { end: false, name: 'Demandeurs', href: 'applicants', icon: HomeIcon, current: false },
     { end: false, name: 'Rendez-vous', href: 'rendez_vous', icon: HomeIcon, current: false },
     { end: false, name: 'Utisateurs', href: 'utisateurs', icon: UserGroupIcon, current: false },
 ]
 const secondaryNavigation = [
 
-    { end: false, name: 'Aide', href: '#', icon: QuestionMarkCircleIcon },
-    { end: false, name: 'Confidentialité', href: '#', icon: ShieldCheckIcon },
+    { end: false, name: 'Aide', href: '/confidentialite', icon: QuestionMarkCircleIcon },
+    { end: false, name: 'Confidentialité', href: 'licence', icon: ShieldCheckIcon },
 ]
 
 
@@ -63,7 +62,7 @@ const Sidebar = ({ children }) => {
                         leaveFrom="translate-x-0"
                         leaveTo="-translate-x-full"
                     >
-                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-red-700">
+                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-blue-700">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-in-out duration-300"
@@ -88,37 +87,18 @@ const Sidebar = ({ children }) => {
                                 <h2>Fidixus</h2>
                             </div>
                             <nav
-                                className="mt-5 flex-shrink-0 h-full divide-y divide-red-800 overflow-y-auto"
+                                className="mt-5 flex-shrink-0 h-full divide-y divide-blue-800 overflow-y-auto"
                                 aria-label="Sidebar"
                             >
                                 <div className="px-2 space-y-1">
                                     {navigation.map((item, index) => (
-                                        <NavLink
-                                            key={item.name}
-
-                                            to={item.href}
-                                            className={({ isActive }) =>
-                                                isActive ? 'bg-red-800 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md' : 'text-red-100 hover:text-white hover:bg-red-600 group flex items-center px-2 py-2 text-base font-medium rounded-md'
-                                            }
-                                            aria-current={item.current ? 'page' : undefined}
-                                        >
-                                            <item.icon className="mr-4 flex-shrink-0 h-6 w-6 text-red-200" aria-hidden="true" />
-                                            {item.name}
-                                        </NavLink>
+                                       <MenuItem item={item} key={index} />
                                     ))}
                                 </div>
                                 <div className="mt-6 pt-6">
                                     <div className="px-2 space-y-1">
                                         {secondaryNavigation.map((item) => (
-                                            <NavLink
-                                                key={item.name}
-                                                to={item.href}
-
-                                                className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-red-100 hover:text-white hover:bg-red-600"
-                                            >
-                                                <item.icon className="mr-4 h-6 w-6 text-red-200" aria-hidden="true" />
-                                                {item.name}
-                                            </NavLink>
+                                            <MenuItem item={item} key={item.name} />
                                         ))}
                                     </div>
                                 </div>
@@ -134,39 +114,22 @@ const Sidebar = ({ children }) => {
             {/* Static sidebar for desktop */}
             <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
                 {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex flex-col flex-grow bg-red-700 pt-5 pb-4 overflow-y-auto">
+                <div className="flex flex-col flex-grow bg-blue-700 pt-5 pb-4 overflow-y-auto">
                     <div className="px-4">
                         <div className="flex items-center">
-                            <h2 className='p-5 text-center font-bold text-xl text-white'>ESPACE TRAVAILLEUR DE GUINÉE</h2>
+                            <h2 className='p-5 text-center font-bold text-xl text-white'>Fidixis</h2>
                         </div>
                     </div>
-                    <nav className="mt-5 flex-1 flex flex-col divide-y divide-red-800 overflow-y-auto" aria-label="Sidebar">
+                    <nav className="mt-5 flex-1 flex flex-col divide-y divide-blue-800 overflow-y-auto" aria-label="Sidebar">
                         <div className="px-2 space-y-1">
-                            {navigation.map((item) => (
-                                <NavLink
-                                    key={item.name}
-                                    to={item.href}
-
-                                    className={({ isActive }) =>
-                                        isActive ? 'bg-red-800 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md' : 'text-red-100 hover:text-white hover:bg-red-600 group flex items-center px-2 py-2 text-base font-medium rounded-md'
-                                    }
-                                    aria-current={item.current ? 'page' : undefined}
-                                >
-                                    <item.icon className="mr-4 flex-shrink-0 h-6 w-6 text-red-200" aria-hidden="true" />
-                                    {item.name}
-                                </NavLink>
+                            {navigation.map((item,index) => (
+                                <MenuItem item={item} key={index} />
                             ))}
                         </div>
                         <div className="mt-6 pt-6">
                             <div className="px-2 space-y-1">
                                 {secondaryNavigation.map((item) => (
-                                    <NavLink key={item.name}
-                                        to={item.href}
-                                        className="group flex items-center px-2 py-2 text-sm leading-6 font-medium rounded-md text-red-100 hover:text-white hover:bg-red-600"
-                                    >
-                                        <item.icon className="mr-4 h-6 w-6 text-red-200" aria-hidden="true" />
-                                        {item.name}
-                                    </NavLink>
+                                    <MenuItem item={item} key={item.name} />
                                 ))}
                             </div>
                         </div>
@@ -178,7 +141,7 @@ const Sidebar = ({ children }) => {
                 <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200 lg:border-none">
                     <button
                         type="button"
-                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500 lg:hidden"
+                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 lg:hidden"
                         onClick={() => setSidebarOpen(true)}
                     >
                         <span className="sr-only">Open sidebar</span>
@@ -208,7 +171,7 @@ const Sidebar = ({ children }) => {
                         <div className="ml-4 flex items-center md:ml-6">
                             <button
                                 type="button"
-                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                             >
                                 <span className="sr-only">voir les notifications</span>
                                 <HomeModernIcon className="h-6 w-6" aria-hidden="true" />
@@ -217,7 +180,7 @@ const Sidebar = ({ children }) => {
                             {/* Profile dropdown */}
                             <Menu as="div" className="ml-3 relative">
                                 <div>
-                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
+                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
                                         <img
                                             className="h-8 w-8 rounded-full"
                                             src="https://duux.com/wp-content/uploads/2019/12/68824649-man-standaard-placeholder-avatar-profiel-gray-picture-ge%C3%AFsoleerd-op-witte-achtergrond-voor-uw-ontwerp-.jpg"
