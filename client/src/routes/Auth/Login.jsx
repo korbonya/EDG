@@ -13,14 +13,14 @@ export default function Login() {
                             name="email"
                             type="email"
                             placeholder="Email"
-                            value=""
+                        
                             onChange={() => { }}
                         />
                         <Password
                             label="Mot de passe"
                             name="password"
                             placeholder="Mot de passe"
-                            value=""
+                           
                             onChange={() => { }}
                         />
                         <Button className="w-full mt-4">Se connecter</Button>
