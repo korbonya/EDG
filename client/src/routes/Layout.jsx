@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import Sidebar from "../components/sidebar";
-import Header from "../components/header";
+import NavBar from "../components/NavBar";
 
 export default function Layout() {
     const location = useLocation()
@@ -17,6 +17,7 @@ export default function Layout() {
        <div className="flex w-full overflow-x-hidden bg-gray-100 overflow-y-hidden min-h-screen h-full">
           <Sidebar />
         <div id="detail" className="w-full md:ml-64 h-full">
+            <NavBar />
             <Outlet />
         </div>
        </div>
