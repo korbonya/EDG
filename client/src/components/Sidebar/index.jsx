@@ -5,14 +5,14 @@ import {
     CogIcon,
     HomeIcon,
     QuestionMarkCircleIcon,
-    ScaleIcon,
     ShieldCheckIcon,
     UserGroupIcon,
-    LockClosedIcon,
-    MoonIcon,
     HomeModernIcon,
+    ListBulletIcon,
+    XMarkIcon,
+    Bars3Icon,
+    ChartBarIcon
 } from '@heroicons/react/24/outline'
-import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png'
 
 import MenuItem from "./MenuItem";
@@ -22,10 +22,10 @@ const classNames = (...classes) => {
 }
 
 const navigation = [
-    { end: true, name: 'Tableau de board', href: '/', icon: HomeIcon, current: true },
-    { end: false, name: 'Demandeurs', href: 'applicants', icon: HomeIcon, current: false },
-    { end: false, name: 'Rendez-vous', href: 'rendez_vous', icon: HomeIcon, current: false },
+    { end: true, name: 'Tableau de board', href: '/', icon: ChartBarIcon, current: true },
+    { end: false, name: 'Pilones', href: 'posts', icon: ListBulletIcon, current: false },
     { end: false, name: 'Utisateurs', href: 'utisateurs', icon: UserGroupIcon, current: false },
+    { end: false, name: 'Parametres', href: 'setting', icon: CogIcon, current: false },
 ]
 const secondaryNavigation = [
 
@@ -78,7 +78,7 @@ const Sidebar = ({ children }) => {
                                         onClick={() => setSidebarOpen(false)}
                                     >
                                         <span className="sr-only">Close sidebar</span>
-                                        <HomeIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                                        <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
                                     </button>
                                 </div>
                             </Transition.Child>
@@ -160,7 +160,7 @@ const Sidebar = ({ children }) => {
                         onClick={() => setSidebarOpen(true)}
                     >
                         <span className="sr-only">Open sidebar</span>
-                        <ShieldCheckIcon className="h-6 w-6" aria-hidden="true" />
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                     {/* Search bar */}
                     <div className="flex-1 px-4 flex justify-between sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
@@ -184,13 +184,13 @@ const Sidebar = ({ children }) => {
                             </form>
                         </div>
                         <div className="ml-4 flex items-center md:ml-6">
-                            <button
+                            {/* <button
                                 type="button"
                                 className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                             >
                                 <span className="sr-only">voir les notifications</span>
                                 <HomeIcon className="h-6 w-6" aria-hidden="true" />
-                            </button>
+                            </button> */}
 
                             {/* Profile dropdown */}
                             <Menu as="div" className="ml-3 relative">
