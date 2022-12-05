@@ -11,7 +11,8 @@ import {
     ListBulletIcon,
     XMarkIcon,
     Bars3Icon,
-    ChartBarIcon
+    ChartBarIcon,
+    MagnifyingGlassIcon
 } from '@heroicons/react/24/outline'
 import logo from '../../assets/images/logo.png'
 
@@ -83,11 +84,13 @@ const Sidebar = ({ children }) => {
                                 </div>
                             </Transition.Child>
                             <div className="flex-shrink-0 flex items-center px-4">
-                                <img
-                                    className="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/workflow-logo-blue-300-mark-white-text.svg"
-                                    alt="Workflow"
-                                />
+                                <div className="flex items-center justify-center py-3 my-5 bg-blue-50">
+                                    <img
+                                        className="h-8 w-auto"
+                                        src={logo}
+                                        alt="Workflow"
+                                    />
+                                </div>
                             </div>
                             <nav
                                 className="mt-5 flex-shrink-0 h-full divide-y divide-blue-800 overflow-y-auto"
@@ -153,10 +156,10 @@ const Sidebar = ({ children }) => {
             </div>
 
             <div className="lg:pl-64 flex flex-col flex-1">
-                <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200 lg:border-none">
+                <div className="relative z-10 flex-shrink-0 flex h-14 bg-white border-b border-gray-200 lg:border-none">
                     <button
                         type="button"
-                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500 lg:hidden"
+                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 lg:hidden"
                         onClick={() => setSidebarOpen(true)}
                     >
                         <span className="sr-only">Open sidebar</span>
@@ -166,12 +169,12 @@ const Sidebar = ({ children }) => {
                     <div className="flex-1 px-4 flex justify-between sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
                         <div className="flex-1 flex">
                             <form className="w-full flex md:ml-0" action="#" method="GET">
-                                <label htmlFor="search-field" className="sr-only">
+                                {/* <label htmlFor="search-field" className="sr-only">
                                     Search
                                 </label>
                                 <div className="relative w-full text-gray-400 focus-within:text-gray-600">
                                     <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none" aria-hidden="true">
-                                        <HomeIcon className="h-5 w-5" aria-hidden="true" />
+                                        <MagnifyingGlassIcon className="h-5 w-5" aria-hidden="true" />
                                     </div>
                                     <input
                                         id="search-field"
@@ -180,13 +183,13 @@ const Sidebar = ({ children }) => {
                                         placeholder="Rechercher..."
                                         type="search"
                                     />
-                                </div>
+                                </div> */}
                             </form>
                         </div>
                         <div className="ml-4 flex items-center md:ml-6">
                             {/* <button
                                 type="button"
-                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                             >
                                 <span className="sr-only">voir les notifications</span>
                                 <HomeIcon className="h-6 w-6" aria-hidden="true" />
@@ -195,7 +198,7 @@ const Sidebar = ({ children }) => {
                             {/* Profile dropdown */}
                             <Menu as="div" className="ml-3 relative">
                                 <div>
-                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
+                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
                                         <img
                                             className="h-8 w-8 rounded-full"
                                             src="https://duux.com/wp-content/uploads/2019/12/68824649-man-standaard-placeholder-avatar-profiel-gray-picture-ge%C3%AFsoleerd-op-witte-achtergrond-voor-uw-ontwerp-.jpg"
@@ -204,10 +207,7 @@ const Sidebar = ({ children }) => {
                                         <span className="hidden ml-3 text-gray-700 text-sm font-medium lg:block">
                                             <span className="sr-only">Open user menu for </span> Aliou Sow
                                         </span>
-                                        <HomeModernIcon
-                                            className="hidden flex-shrink-0 ml-1 h-5 w-5 text-gray-400 lg:block"
-                                            aria-hidden="true"
-                                        />
+
                                     </Menu.Button>
                                 </div>
                                 <Transition
@@ -256,8 +256,8 @@ const Sidebar = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <main className="flex-1 pb-8">
-                   {children}
+                <main className="flex-1 px-8 pb-4">
+                    {children}
                 </main>
             </div>
 
