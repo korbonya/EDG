@@ -256,7 +256,7 @@ const Sidebar = ({ children }) => {
                         </div>
                     </div>
                 </div>
-                <main className="flex-1 px-8 pb-4">
+                <main className="flex-1 px-4 pb-4">
                     {children}
                 </main>
             </div>
