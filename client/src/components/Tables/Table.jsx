@@ -58,7 +58,7 @@ export default function Table({
         <DebouncedInput
           value={globalFilter ?? ''}
           onChange={value => setGlobalFilter((value))}
-          className="mt-4 mb-8 w-full border rounded py-1 px-4 bg-gray-50"
+          className="mt-4 mb-8 w-full border rounded py-2 px-4 bg-gray-50"
           placeholder="Rechercher une catégorie de questions"
         />
       <table className='w-full relative z-0 table-fixed divide-y divide-gray-200 mx-4'>

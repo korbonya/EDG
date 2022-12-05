@@ -12,7 +12,9 @@ import {
     XMarkIcon,
     Bars3Icon,
     ChartBarIcon,
-    MagnifyingGlassIcon
+    MagnifyingGlassIcon, 
+    MapIcon,
+    WrenchIcon,
 } from '@heroicons/react/24/outline'
 import logo from '../../assets/images/logo.png'
 
@@ -24,12 +26,13 @@ const classNames = (...classes) => {
 
 const navigation = [
     { end: true, name: 'Tableau de board', href: '/', icon: ChartBarIcon, current: true },
+    { end: true, name: 'Carte', href: 'map', icon: MapIcon, current: false },
     { end: false, name: 'Pilones', href: 'posts', icon: ListBulletIcon, current: false },
+    { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
     { end: false, name: 'Utisateurs', href: 'utisateurs', icon: UserGroupIcon, current: false },
     { end: false, name: 'Parametres', href: 'setting', icon: CogIcon, current: false },
 ]
 const secondaryNavigation = [
-
     { end: false, name: 'Aide', href: '/confidentialite', icon: QuestionMarkCircleIcon },
     { end: false, name: 'Confidentialité', href: 'licence', icon: ShieldCheckIcon },
 ]
