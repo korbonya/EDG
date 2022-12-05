@@ -345,6 +345,13 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
+"@tanstack/match-sorter-utils@^8.7.0":
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/match-sorter-utils/-/match-sorter-utils-8.7.0.tgz#60b09a6d3d7974d5f86f1318053c1bd5a85fb0be"
+  integrity sha512-OgfIPMHTfuw9JGcXCCoEHWFP/eSP2eyhCYwkrFnWBM3NbUPAgOlFP11DbM7cozDRVB0XbPr1tD4pLAtWKlVUVg==
+  dependencies:
+    remove-accents "0.4.2"
+
 "@tanstack/react-table@^8.7.0":
   version "8.7.0"
   resolved "https://registry.yarnpkg.com/@tanstack/react-table/-/react-table-8.7.0.tgz#853fae74db6bf49738d0f18e4d507b00262fc09c"
@@ -1051,6 +1058,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+remove-accents@0.4.2:
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/remove-accents/-/remove-accents-0.4.2.tgz#0a43d3aaae1e80db919e07ae254b285d9e1c7bb5"
+  integrity sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==
 
 resolve@^1.1.7, resolve@^1.22.1:
   version "1.22.1"
