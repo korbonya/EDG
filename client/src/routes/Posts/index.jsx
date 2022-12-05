@@ -1,8 +1,8 @@
+import { PageHeader } from "../../components/Pages"
 
 export default function index() {
-  return (
-    <div className="bg-red-300">
-        <h1>Liste des pilones en guinee</h1>
-    </div>
-  )
+    return (
+       <PageHeader title='Listes des pilones' subTitle='Informations sur les pilones et les transformateurs'
+        button="Ajouter un pilone" buttonLink='add' />
+    )
 }
