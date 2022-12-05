@@ -58,10 +58,10 @@ export default function Table({
         <DebouncedInput
           value={globalFilter ?? ''}
           onChange={value => setGlobalFilter((value))}
-          className="my-4 w-full border rounded py-1 px-4"
+          className="mt-4 mb-8 w-full border rounded py-1 px-4 bg-gray-50"
           placeholder="Rechercher une catégorie de questions"
         />
-      <table className='w-full relative z-0 table-fixed divide-y divide-gray-200'>
+      <table className='w-full relative z-0 table-fixed divide-y divide-gray-200 mx-4'>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id} className="bg-gray-50">
@@ -69,7 +69,7 @@ export default function Table({
                 return (
                   <th key={header.id} colSpan={header.colSpan} style={{
                     width: header.getSize() !== 0 ? header.getSize() : undefined,
-                }} className="px-6 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                }} className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
                     {header.isPlaceholder ? null : (
                       <div>
                         {flexRender(
@@ -87,7 +87,7 @@ export default function Table({
         <tbody className='bg-white divide-y divide-gray-200'>
           {table.getRowModel().rows.map(row => {
             return (
-              <tr key={row.id} className="relative hover:bg-gray-50 hover:shadow">
+              <tr key={row.id} className="relative hover:bg-gray-50 hover:shadow hover:border-b-0">
                 {row.getVisibleCells().map(cell => {
                   return (
                     <td key={cell.id}  style={{
@@ -95,7 +95,7 @@ export default function Table({
                         cell.column.getSize() !== 0
                           ? cell.column.getSize()
                           : undefined,
-                    }} className=" px-6 py-2 truncate whitespace-nowrap z-0">
+                    }} className=" px-6 py-3 truncate whitespace-nowrap z-0">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

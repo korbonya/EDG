@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 
 export function ActionButtons({id, onDelete}) {
   return (
-    <div className="absolute top-2 right-8 w-6 text-right">
+    <div className="absolute top-0 right-8 w-6 text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className=" relative inline-flex w-full justify-center rounded-md px-4 py-2 text-sm font-medium text-black hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 z-0">
-            <div className="text-2xl text-gray-700 after:content-['\2807']"></div>
+            <div className="text-xl text-gray-700 after:content-['\2807']"></div>
             {/* <DotsVerticalIcon
               className="ml-2 -mr-1 h-5 w-5 text-red-400 hover:text-violet-100"
               aria-hidden="true"

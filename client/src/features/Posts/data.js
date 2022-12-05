@@ -16,7 +16,7 @@ export const posts = [
             actives: 12,
             inactives: 2
         },
-        date_built: '2003-01-01',
+        deployed_at: '2003-01-01',
         date_last_renovation: '2019-01-01',
     },
     {
@@ -35,7 +35,7 @@ export const posts = [
             actives: 14,
             inactives: 1
         },
-        date_built: '2003-01-01',
+        deployed_at: '2003-01-01',
         date_last_renovation: '2019-01-01',
     },
     {
@@ -54,7 +54,7 @@ export const posts = [
             actives: 10,
             inactives: 3
         },
-        date_built: '2003-01-01',
+        deployed_at: '2003-01-01',
         date_last_renovation: '2019-01-01',
     },
     {
@@ -73,7 +73,7 @@ export const posts = [
             actives: 8,
             inactives: 5
         },
-        date_built: '2003-01-01',
+        deployed_at: '2003-01-01',
         date_last_renovation: '2019-01-01',
     },
     {
@@ -92,7 +92,7 @@ export const posts = [
             actives: 6,
             inactives: 7
         },
-        date_built: '2003-01-01',
+        deployed_at: '2003-01-01',
         date_last_renovation: '2019-01-01',
     },
 ]
