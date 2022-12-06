@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Tabs } from '@headlessui/react'
+import { Tab } from '@headlessui/react'
 
 export default function DetailsHeader({
     title,
@@ -12,8 +12,8 @@ export default function DetailsHeader({
     ...props
     }) {
     return (
-        <div className='bg-white shadow'>
-        <div className='max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8'>
+        <div className='bg-white w-full shadow'>
+        <div className='py-6 px-4 sm:px-6 lg:px-8'>
             <div className='flex justify-between items-center'>
             <div className='flex'>
                 <div className='flex-shrink-0'>
@@ -45,11 +45,11 @@ export default function DetailsHeader({
             </div>
         </div>
         <div className='border-b border-gray-200'>
-            <Tabs>
+            <Tab.Group>
             <div className='max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8'>
-                <Tabs.List className='flex space-x-8'>
+                <Tab.List className='flex space-x-8'>
                 {tabs.map((tab, index) => (
-                    <Tabs.Tab
+                    <Tab
                     key={index}
                     className={({ selected }) =>
                         `${
@@ -61,11 +61,11 @@ export default function DetailsHeader({
                     }
                     >
                     {tab}
-                    </Tabs.Tab>
+                    </Tab>
                 ))}
-                </Tabs.List>
+                </Tab.List>
             </div>
-            </Tabs>
+            </Tab.Group>
         </div>
         </div>
     )
