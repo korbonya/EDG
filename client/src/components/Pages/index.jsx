@@ -1,3 +1,4 @@
 import PageHeader from "./PageHeader";
+import DetailsHeader from "./DetailsHeader";
 
-export { PageHeader };
+export { PageHeader, DetailsHeader };

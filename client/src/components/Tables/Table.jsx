@@ -46,7 +46,8 @@ export default function Table({
     state: {
       globalFilter,
     },
-    columnResizeMode,
+    enableColumnResizing: true,
+    columnResizeMode: 'onChange',
     onGlobalFilterChange: setGlobalFilter,
     globalFilterFn: fuzzyFilter,
     getCoreRowModel: getCoreRowModel(),
@@ -69,37 +70,26 @@ export default function Table({
             <tr key={headerGroup.id} className="bg-gray-50">
               {headerGroup.headers.map(header => {
                 return (
-                  <th   {...{
-                    key: header.id,
-                    colSpan: header.colSpan,
-                    style: {
-                      width: header.getSize(),
-                    },
-                  }} className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                      {header.isPlaceholder
+                  <th 
+                  key={header.id}
+                  colSpan={header.colSpan}
+                  style={{ position: 'relative', width: header.getSize() }}
+                  className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                     {header.isPlaceholder
                       ? null
                       : flexRender(
                           header.column.columnDef.header,
                           header.getContext()
                         )}
-                    <div
-                      {...{
-                        onMouseDown: header.getResizeHandler(),
-                        onTouchStart: header.getResizeHandler(),
-                        className: `resizer ${
+                    {header.column.getCanResize() && (
+                      <div
+                        onMouseDown={header.getResizeHandler()}
+                        onTouchStart={header.getResizeHandler()}
+                        className={`resizer ${
                           header.column.getIsResizing() ? 'isResizing' : ''
-                        }`,
-                        style: {
-                          transform:
-                            columnResizeMode === 'onEnd' &&
-                            header.column.getIsResizing()
-                              ? `translateX(${
-                                  table.getState().columnSizingInfo.deltaOffset
-                                }px)`
-                              : '',
-                        },
-                      }}
-                    />
+                        }`}
+                      ></div>
+                    )}
                   </th>
                 )
               })}
@@ -112,12 +102,8 @@ export default function Table({
               <tr key={row.id} className="relative hover:bg-gray-50 hover:shadow hover:border-b-0">
                 {row.getVisibleCells().map(cell => {
                   return (
-                    <td  {...{
-                        key: cell.id,
-                        style: {
-                          width: cell.column.getSize(),
-                        },
-                      }} className=" px-6 py-3 truncate whitespace-nowrap z-0">
+                    <td key={cell.id} style={{ width: cell.column.getSize() }}
+                     className=" px-6 py-3 truncate whitespace-nowrap z-0">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
