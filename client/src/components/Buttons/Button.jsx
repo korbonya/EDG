@@ -12,7 +12,7 @@ const Button = ({ children, onClick, className, disabled }) => {
 
     return (
         <button
-            className={`bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${className}`}
+            className={`bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-300 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${className}`}
             onClick={handleClick}
             disabled={disabled || loading}
         >

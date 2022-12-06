@@ -9,7 +9,7 @@ const Password = ({ label, name, placeholder, value, onChange, error }) => {
             <label className="text-sm font-medium text-gray-600" htmlFor={name}>{label}</label>
             <div className="relative">
                 <input
-                    className="border w-full border-gray-300 rounded-md px-4 py-2 mt-2 focus:outline-none focus:border-blue-500"
+                    className="border w-full border-gray-300 rounded-md px-4 py-2 mt-2 focus:outline-none focus:border-yellow-500"
                     type={showPassword ? "text" : "password"}
                     name={name}
                     id={name}

@@ -65,7 +65,7 @@ const Sidebar = ({ children }) => {
                         leaveFrom="translate-x-0"
                         leaveTo="-translate-x-full"
                     >
-                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-blue-700">
+                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-yellow-700">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-in-out duration-300"
@@ -87,16 +87,12 @@ const Sidebar = ({ children }) => {
                                 </div>
                             </Transition.Child>
                             <div className="flex-shrink-0 flex items-center px-4">
-                                <div className="flex items-center justify-center py-3 my-5 bg-blue-50">
-                                    <img
-                                        className="h-8 w-auto"
-                                        src={logo}
-                                        alt="Workflow"
-                                    />
+                                <div className="flex items-center justify-center py-3 my-5 bg-yellow-50">
+                                   <h1 className='text-lg'>EDG</h1>
                                 </div>
                             </div>
                             <nav
-                                className="mt-5 flex-shrink-0 h-full divide-y divide-blue-800 overflow-y-auto"
+                                className="mt-5 flex-shrink-0 h-full divide-y divide-yellow-800 overflow-y-auto"
                                 aria-label="Sidebar"
                             >
                                 <div className="px-2 space-y-1">
@@ -127,17 +123,13 @@ const Sidebar = ({ children }) => {
             {/* Static sidebar for desktop */}
             <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
                 {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex flex-col flex-grow bg-blue-700 pt-5 pb-4 overflow-y-auto">
+                <div className="flex flex-col flex-grow bg-yellow-700 pt-5 pb-4 overflow-y-auto">
                     <div className="px-4">
-                        <div className="flex items-center justify-center py-3 my-5 bg-blue-50">
-                            <img
-                                className="h-8 w-auto"
-                                src={logo}
-                                alt="Workflow"
-                            />
+                        <div className="flex items-center justify-center py-3 my-5 bg-yellow-50">
+                        <h1 className='text-lg'>EDG</h1>
                         </div>
                     </div>
-                    <nav className="mt-5 flex-1 flex flex-col divide-y divide-blue-800 overflow-y-auto" aria-label="Sidebar">
+                    <nav className="mt-5 flex-1 flex flex-col divide-y divide-yellow-800 overflow-y-auto" aria-label="Sidebar">
                         <div className="px-2 space-y-1">
                             {navigation.map((item, index) => (
                                 <Fragment key={index}>
@@ -162,7 +154,7 @@ const Sidebar = ({ children }) => {
                 <div className="relative z-10 flex-shrink-0 flex h-14 bg-white border-b border-gray-200 lg:border-none">
                     <button
                         type="button"
-                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 lg:hidden"
+                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500 lg:hidden"
                         onClick={() => setSidebarOpen(true)}
                     >
                         <span className="sr-only">Open sidebar</span>
@@ -192,7 +184,7 @@ const Sidebar = ({ children }) => {
                         <div className="ml-4 flex items-center md:ml-6">
                             {/* <button
                                 type="button"
-                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                             >
                                 <span className="sr-only">voir les notifications</span>
                                 <HomeIcon className="h-6 w-6" aria-hidden="true" />
@@ -201,7 +193,7 @@ const Sidebar = ({ children }) => {
                             {/* Profile dropdown */}
                             <Menu as="div" className="ml-3 relative">
                                 <div>
-                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
+                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
                                         <img
                                             className="h-8 w-8 rounded-full"
                                             src="https://duux.com/wp-content/uploads/2019/12/68824649-man-standaard-placeholder-avatar-profiel-gray-picture-ge%C3%AFsoleerd-op-witte-achtergrond-voor-uw-ontwerp-.jpg"

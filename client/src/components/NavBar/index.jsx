@@ -14,7 +14,7 @@ export default function index() {
     <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200 lg:border-none">
         <button
             type="button"
-            className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 lg:hidden"
+            className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500 lg:hidden"
             onClick={() => setSidebarOpen(true)}
         >
             <span className="sr-only">Open sidebar</span>
@@ -44,7 +44,7 @@ export default function index() {
             <div className="ml-4 flex items-center md:ml-6">
                 <button
                     type="button"
-                    className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                 >
                     <span className="sr-only">voir les notifications</span>
                     <HomeModernIcon className="h-6 w-6" aria-hidden="true" />
@@ -53,7 +53,7 @@ export default function index() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                     <div>
-                        <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
+                        <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
                             <img
                                 className="h-8 w-8 rounded-full"
                                 src="https://duux.com/wp-content/uploads/2019/12/68824649-man-standaard-placeholder-avatar-profiel-gray-picture-ge%C3%AFsoleerd-op-witte-achtergrond-voor-uw-ontwerp-.jpg"

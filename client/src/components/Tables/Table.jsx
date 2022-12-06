@@ -5,7 +5,6 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   flexRender,
-  filterFns,
 } from '@tanstack/react-table'
 import DebouncedInput from './DebouncedInput'
 import {
@@ -31,6 +30,8 @@ export default function Table({
   columns,
 }){
   const [globalFilter, setGlobalFilter] = React.useState('')
+  const [columnResizeMode, setColumnResizeMode] =
+    React.useState('onChange')
 
   const table = useReactTable({
     data,
@@ -45,6 +46,7 @@ export default function Table({
     state: {
       globalFilter,
     },
+    columnResizeMode,
     onGlobalFilterChange: setGlobalFilter,
     globalFilterFn: fuzzyFilter,
     getCoreRowModel: getCoreRowModel(),
@@ -67,17 +69,37 @@ export default function Table({
             <tr key={headerGroup.id} className="bg-gray-50">
               {headerGroup.headers.map(header => {
                 return (
-                  <th key={header.id} colSpan={header.colSpan} style={{
-                    width: header.getSize() !== 0 ? header.getSize() : undefined,
-                }} className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
-                    {header.isPlaceholder ? null : (
-                      <div>
-                        {flexRender(
+                  <th   {...{
+                    key: header.id,
+                    colSpan: header.colSpan,
+                    style: {
+                      width: header.getSize(),
+                    },
+                  }} className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                      {header.isPlaceholder
+                      ? null
+                      : flexRender(
                           header.column.columnDef.header,
                           header.getContext()
                         )}
-                      </div>
-                    )}
+                    <div
+                      {...{
+                        onMouseDown: header.getResizeHandler(),
+                        onTouchStart: header.getResizeHandler(),
+                        className: `resizer ${
+                          header.column.getIsResizing() ? 'isResizing' : ''
+                        }`,
+                        style: {
+                          transform:
+                            columnResizeMode === 'onEnd' &&
+                            header.column.getIsResizing()
+                              ? `translateX(${
+                                  table.getState().columnSizingInfo.deltaOffset
+                                }px)`
+                              : '',
+                        },
+                      }}
+                    />
                   </th>
                 )
               })}
@@ -90,12 +112,12 @@ export default function Table({
               <tr key={row.id} className="relative hover:bg-gray-50 hover:shadow hover:border-b-0">
                 {row.getVisibleCells().map(cell => {
                   return (
-                    <td key={cell.id}  style={{
-                      width:
-                        cell.column.getSize() !== 0
-                          ? cell.column.getSize()
-                          : undefined,
-                    }} className=" px-6 py-3 truncate whitespace-nowrap z-0">
+                    <td  {...{
+                        key: cell.id,
+                        style: {
+                          width: cell.column.getSize(),
+                        },
+                      }} className=" px-6 py-3 truncate whitespace-nowrap z-0">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()

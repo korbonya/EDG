@@ -14,7 +14,7 @@ export default function Layout() {
     }
     return (
         <>
-            <div className="flex w-full bg-blue-50 min-h-screen h-full">
+            <div className="flex w-full bg-yellow-50 min-h-screen h-full">
                 <Sidebar>
                     <Outlet />
                 </Sidebar>
