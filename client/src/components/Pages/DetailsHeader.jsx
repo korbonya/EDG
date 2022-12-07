@@ -12,8 +12,8 @@ export default function DetailsHeader({
     ...props
     }) {
     return (
-        <div className='bg-yellow-600  w-full shadow'>
-        <div className='py-6 px-4 sm:px-6 lg:px-8'>
+        <div className='bg-white  w-full shadow'>
+        <div className='py-4 px-4 sm:px-6 lg:px-8'>
             <div className='flex justify-between items-center'>
             <div className='flex'>
                 <div className='flex-shrink-0'>
