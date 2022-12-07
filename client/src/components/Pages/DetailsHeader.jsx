@@ -4,13 +4,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Tab } from '@headlessui/react'
 
-export default function DetailsHeader({
-    title,
-    tabs,
-    backUrl,
-    children,
-    ...props
-    }) {
+export default function DetailsHeader({ title,tabs,backUrl,children, ...props}) {
     return (
         <div className='bg-white  w-full shadow'>
         <div className='py-4 px-4 sm:px-6 lg:px-8'>
