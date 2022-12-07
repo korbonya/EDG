@@ -9,28 +9,16 @@ export default defineConfig({
       preventAssignment: true,
       values: {
         __DEV__: JSON.stringify(true),
-        "process.env.NODE_ENV": JSON.stringify("development"),
+        'process.env.NODE_ENV': JSON.stringify('development'),
       },
     }),
     react(),
   ],
   resolve: process.env.USE_SOURCE
     ? {
-      alias: {
-        'react-table': path.resolve(__dirname, '../../../src/index.ts'),
-        "@remix-run/router": path.resolve(
-          __dirname,
-          "../../packages/router/index.ts"
-        ),
-        "react-router": path.resolve(
-          __dirname,
-          "../../packages/react-router/index.ts"
-        ),
-        "react-router-dom": path.resolve(
-          __dirname,
-          "../../packages/react-router-dom/index.tsx"
-        ),
-      },
-    }
+        alias: {
+          'react-table': path.resolve(__dirname, '../../../src/index.ts'),
+        },
+      }
     : {},
 })

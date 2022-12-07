@@ -27,7 +27,7 @@ const classNames = (...classes) => {
 const navigation = [
     { end: true, name: 'Tableau de board', href: '/', icon: ChartBarIcon, current: true },
     { end: true, name: 'Carte', href: 'map', icon: MapIcon, current: false },
-    { end: false, name: 'Pilones', href: 'posts', icon: ListBulletIcon, current: false },
+    { end: false, name: 'pylônes', href: 'posts', icon: ListBulletIcon, current: false },
     { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
     { end: false, name: 'Utisateurs', href: 'utisateurs', icon: UserGroupIcon, current: false },
     { end: false, name: 'Parametres', href: 'setting', icon: CogIcon, current: false },

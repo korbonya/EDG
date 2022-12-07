@@ -8,7 +8,7 @@ const Dashboard = lazy(() => import("./routes/Dashboard"));
 const Login = lazy(() => import("./routes/Auth/Login.jsx"));
 const Posts = lazy(() => import("./routes/Posts"));
 const AddPost = lazy(() => import("./routes/Posts/add"));
-const DetailsPost = lazy(() => import("./routes/Posts/details"));
+const DetailsPost = lazy(() => import("./routes/Posts/Details"));
 
 
 export const router = createBrowserRouter([

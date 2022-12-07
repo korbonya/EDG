@@ -12,7 +12,7 @@ export default function DetailsHeader({
     ...props
     }) {
     return (
-        <div className='bg-white w-full shadow'>
+        <div className='bg-yellow-600  w-full shadow'>
         <div className='py-6 px-4 sm:px-6 lg:px-8'>
             <div className='flex justify-between items-center'>
             <div className='flex'>
@@ -44,7 +44,7 @@ export default function DetailsHeader({
             </div>
             </div>
         </div>
-        <div className='border-b border-gray-200'>
+        {/* <div className='border-b border-gray-200'>
             <Tab.Group>
             <div className='max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8'>
                 <Tab.List className='flex space-x-8'>
@@ -66,7 +66,7 @@ export default function DetailsHeader({
                 </Tab.List>
             </div>
             </Tab.Group>
-        </div>
+        </div> */}
         </div>
     )
     }
