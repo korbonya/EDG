@@ -9,6 +9,7 @@ const Login = lazy(() => import("./routes/Auth/Login.jsx"));
 const Posts = lazy(() => import("./routes/Posts"));
 const AddPost = lazy(() => import("./routes/Posts/add"));
 const DetailsPost = lazy(() => import("./routes/Posts/Details"));
+const Map = lazy(() => import("./routes/Map"));
 
 
 export const router = createBrowserRouter([
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: "posts/:id",
                 element: <Suspense> <DetailsPost /> </Suspense>,
+            },
+            {
+                path: "map",
+                element: <Suspense> <Map /> </Suspense>,
             },
         ]
     },
