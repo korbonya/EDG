@@ -23,7 +23,7 @@ export default function index() {
         },
         {
             header: "Sortie",
-            id: "longeur",
+            id: "sortie",
             accessorFn: (row) => `${row.length} km`,
         },
         {
