@@ -28,6 +28,9 @@ const navigation = [
     { end: true, name: 'Tableau de board', href: '/', icon: ChartBarIcon, current: true },
     { end: true, name: 'Carte', href: 'map', icon: MapIcon, current: false },
     { end: false, name: 'pylônes', href: 'posts', icon: ListBulletIcon, current: false },
+    { end: false, name: 'Lignes Électriques', href: 'lines', icon: MagnifyingGlassIcon, current: false},
+    { end: false, name: 'Postes de tranformation', href: 'ptrans', icon: HomeModernIcon, current: false},
+    {end : false, name: 'Centrales Elèctriques', href: 'centrals', icon: HomeIcon, current: false},
     { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
     { end: false, name: 'Utisateurs', href: 'utisateurs', icon: UserGroupIcon, current: false },
     { end: false, name: 'Parametres', href: 'setting', icon: CogIcon, current: false },
@@ -102,7 +105,7 @@ const Sidebar = ({ children }) => {
                                         </Fragment>
                                     ))}
                                 </div>
-                                <div className="mt-6 pt-6">
+                                {/* <div className="mt-6 pt-6">
                                     <div className="px-2 space-y-1">
                                         {secondaryNavigation.map((item) => (
                                             <Fragment key={item.name}>
@@ -110,7 +113,7 @@ const Sidebar = ({ children }) => {
                                             </Fragment>
                                         ))}
                                     </div>
-                                </div>
+                                </div> */}
                             </nav>
                         </div>
                     </Transition.Child>
@@ -137,7 +140,7 @@ const Sidebar = ({ children }) => {
                                 </Fragment>
                             ))}
                         </div>
-                        <div className="mt-6 pt-6">
+                        {/* <div className="mt-6 pt-6">
                             <div className="px-2 space-y-1">
                                 {secondaryNavigation.map((item) => (
                                     <Fragment key={item.name}>
@@ -145,7 +148,7 @@ const Sidebar = ({ children }) => {
                                     </Fragment>
                                 ))}
                             </div>
-                        </div>
+                        </div> */}
                     </nav>
                 </div>
             </div>

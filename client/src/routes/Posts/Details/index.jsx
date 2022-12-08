@@ -27,7 +27,7 @@ export default function index() {
                                 </div>
                                 <div className="flex items-center mt-2">
                                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-yellow-100 text-green-800">
-                                        En chat
+                                        En Traillie
                                     </span>
                                 </div>
                             </div>
@@ -44,6 +44,9 @@ export default function index() {
                                     </span>
                                 </div>
                             </div>
+                        </div>
+                        <div className="mt-4">
+                            <h1 className="font-bold">Lignes: L0245, L3256, LLA235</h1>
                         </div>
                         <div className="flex mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
@@ -79,15 +82,33 @@ export default function index() {
                                     {({ open }) => (
                                         <>
                                             <Disclosure.Button className="flex w-full justify-between rounded-lg bg-yellow-100 px-4 py-2 text-left text-sm font-medium text-yellow-900 hover:bg-yellow-200 focus:outline-none focus-visible:ring focus-visible:ring-yellow-500 focus-visible:ring-opacity-75">
-                                                <span>What is your refund policy?</span>
+                                                <span>Transformateurs èlévateur TR02134</span>
                                                 <ChevronUpIcon
                                                     className={`${open ? 'rotate-180 transform' : ''
                                                         } h-5 w-5 text-yellow-500`}
                                                 />
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                                                If you're unhappy with your purchase for any reason, email us
-                                                within 90 days and we'll refund you in full, no questions asked.
+                                              <table className="table-auto w-full">
+                                                <thead>
+                                                    <tr>
+                                                        <th className="px-4 py-2">Nom</th>
+                                                        <th className="px-4 py-2">Puissance</th>
+                                                        <th className="px-4 py-2">Etat</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td className="border px-4 py-2">TR02134</td>
+                                                        <td className="border px-4 py-2">440 KV</td>
+                                                        <td className="border px-4 py-2">
+                                                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                                                Actif
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                             </Disclosure.Panel>
                                         </>
                                     )}
@@ -96,14 +117,34 @@ export default function index() {
                                     {({ open }) => (
                                         <>
                                             <Disclosure.Button className="flex w-full justify-between rounded-lg bg-yellow-100 px-4 py-2 text-left text-sm font-medium text-yellow-900 hover:bg-yellow-200 focus:outline-none focus-visible:ring focus-visible:ring-yellow-500 focus-visible:ring-opacity-75">
-                                                <span>Do you offer technical support ?</span>
+                                                <span>Transformateur SA2354 ?</span>
                                                 <ChevronUpIcon
                                                     className={`${open ? 'rotate-180 transform' : ''
                                                         } h-5 w-5 text-yellow-500`}
                                                 />
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                                                No.
+                                                <table className="table-auto w-full">
+                                                    <thead>
+                                                        <tr>
+                                                            <th className="px-4 py-2">Nom</th>
+                                                            <th className="px-4 py-2">Puissance</th>
+                                                            <th className="px-4 py-2">Etat</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td className="border px-4 py-2">TR02134</td>
+                                                            <td className="border px-4 py-2">440 KV</td>
+                                                            <td className="border px-4 py-2">
+                                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                                                    Actif
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            
                                             </Disclosure.Panel>
                                         </>
                                     )}
