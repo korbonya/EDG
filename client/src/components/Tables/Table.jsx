@@ -62,7 +62,7 @@ export default function Table({
           value={globalFilter ?? ''}
           onChange={value => setGlobalFilter((value))}
           className="mt-4 mb-8 w-full border rounded py-2 px-4 bg-gray-50"
-          placeholder="Rechercher une catégorie de questions"
+          placeholder="Rechercher"
         />
       <table className='w-full relative z-0 table-fixed divide-y divide-gray-200 mx-4'>
         <thead>

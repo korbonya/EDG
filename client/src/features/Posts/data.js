@@ -237,3 +237,47 @@ export const powerStations = [
     },
 ]
 
+export const tStations = [
+    {
+        id: 1,
+        number_register: '2003T0001',
+        address: 'T6 rond point',
+        cityTown: 'Conakry/Kaloum',
+        geoCoords: {
+            lat: 9.625411,
+            lng: -13.62
+        },
+        input: 2000,
+        output: 1000,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 2,
+        number_register: '2003T0002',
+        address: 'T6 rond point',
+        cityTown: 'Conakry/Kaloum',
+        geoCoords: {
+            lat: 9.625411,
+            lng: -13.62
+        },
+        input: 2000,
+        output: 1000,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 3,
+        number_register: '2003T0003',
+        address: 'T6 rond point',
+        cityTown: 'Conakry/Kaloum',
+        geoCoords: {
+            lat: 9.625411,
+            lng: -13.62
+        },
+        input: 2000,
+        output: 1000,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+]

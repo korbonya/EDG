@@ -11,6 +11,7 @@ const AddPost = lazy(() => import("./routes/Posts/add"));
 const DetailsPost = lazy(() => import("./routes/Posts/Details"));
 const Map = lazy(() => import("./routes/Map"));
 const Lines = lazy(() => import("./routes/Lines"));
+const PowerStations = lazy(() => import("./routes/PowerStation"));
 
 
 export const router = createBrowserRouter([
@@ -42,6 +43,11 @@ export const router = createBrowserRouter([
                 path: "lines",
                 element: <Suspense> <Lines /> </Suspense>,
             },
+            {
+                path: "power",
+                element: <Suspense> <PowerStations /> </Suspense>,
+            },
+            
         ]
     },
     {
