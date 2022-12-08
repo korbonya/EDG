@@ -3,6 +3,7 @@ import { divIcon} from 'leaflet';
 import L from 'leaflet';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faNetworkWired } from '@fortawesome/free-solid-svg-icons'
 import './style.css';
 
 export const customMarkerIcon = (color, icon) => {
@@ -21,9 +22,7 @@ const bgStyle ={
 }
 const iconMarkup = renderToStaticMarkup(
   <div style={bgStyle} >
-      <h3 className='text-white'>24</h3>
-     {/* <FontAwesomeIcon className='text-white' icon="fa-brands fa-twitter" /> */}
-      {/* <i style={{"--mycolor": "white"}} className={icon+ " fa-2x"} /> */}
+      <FontAwesomeIcon className='text-white mb-2' icon={faNetworkWired} />
   </div>
 );
 

@@ -10,7 +10,6 @@ export default function index() {
     console.log('posts:;', posts)
     return (
         <div>
-            <FontAwesomeIcon icon="fa-solid fa-spinner" className="highlight" />
             <div id='map' className="h-64">
                 <MapContainer center={center} zoom={7} scrollWheelZoom={true}>
                     <TileLayer
