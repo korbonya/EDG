@@ -17,7 +17,7 @@ export default function index() {
             accessorFn: (row) => [row.city, row.town].join(" / "),
         },
         {
-            header: "",
+            header: "Tension",
             id: "type",
             accessorKey: "type",
         },

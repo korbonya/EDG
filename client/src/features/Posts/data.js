@@ -115,3 +115,47 @@ export const posts = [
         date_last_renovation: '2019-01-01',
     },
 ]
+
+export const lines = [
+    {
+        id: 1,
+        number_register: '2003L0001',
+        startEnd:"2003P0001 - 2003P0002",
+        length: 100,
+        type: 'basse Tension',
+        voltage: 220,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 2,
+        number_register: '2003L0002',
+        startEnd:"2003P0002 - 2003P0003",
+        length: 100,
+        type: 'haute Tension',
+        voltage: 440,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 3,
+        number_register: '2003L0003',
+        startEnd:"2003P0003 - 2003P0004",
+        length: 100,
+        type: 'basse Tension',
+        voltage: 220,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 4,
+        number_register: '2003L0004',
+        startEnd:"2003P0004 - 2003P0005",
+        length: 100,
+        type: 'basse Tension',
+        voltage: 220,
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+]
+
