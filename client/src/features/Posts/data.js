@@ -159,3 +159,81 @@ export const lines = [
     },
 ]
 
+export const powerStations = [
+    {
+        id: 1,
+        number_register: '2003S0001',
+        name: 'Station 1',
+        type: 'hidroelectrique',
+        power: 1000,
+        cityTown: 'Conakry/Kaloum',
+        geoCoords: {
+            lat: 9.625411,
+            lng: -13.62
+        },
+        address: 'Rue 2, Quartier 2, Commune 2',
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 2,
+        number_register: '2003S0002',
+        name: 'Station 2',
+        type: 'thermique',
+        power: 1000,
+        cityTown: 'Conakry/Ratoma',
+        geoCoords: {
+            lat: 9.639911,
+            lng: -13.61581
+        },
+        address: 'Rue 1, Quartier 1, Commune 1',
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 3,
+        number_register: '2003S0003',
+        name: 'Station 3',
+        type: 'thermique',
+        power: 1000,
+        cityTown: 'Conakry/Dixin',
+        geoCoords: {
+            lat: 9.625411,
+            lng: -13.62564
+        },
+        address: 'Rue 3, Quartier 3, Commune 3',
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 4,
+        number_register: '2003S0004',
+        name: 'Station 4',
+        type: 'thermique',
+        power: 1000,
+        cityTown: 'Conakry/Kaloum',
+        geoCoords: {
+            lat: 9.645411,
+            lng: -13.655476
+        },
+        address: 'Rue 4, Quartier 4, Commune 4',
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+    {
+        id: 5,
+        number_register: '2003S0005',
+        name: 'Station 5',
+        type: 'thermique',
+        power: 1000,
+        cityTown: 'Conakry/Kaloum',
+        geoCoords: {
+            lat: 9.6255411,
+            lng: -13.65476
+        },
+        address: 'Rue 5, Quartier 5, Commune 5',
+        deployed_at: '2003-01-01',
+        date_last_renovation: '2019-01-01',
+    },
+]
+
