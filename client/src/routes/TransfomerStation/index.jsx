@@ -19,12 +19,12 @@ export default function index() {
         {
             header: "Entrée",
             id: "tension",
-            accessorFn: (row) => `${row.voltage} kV`
+            accessorFn: (row) => `${row.input} kV`
         },
         {
             header: "Sortie",
             id: "sortie",
-            accessorFn: (row) => `${row.length} km`,
+            accessorFn: (row) => `${row.output} KV`,
         },
         {
             accessorKey: "deployed_at",
@@ -42,9 +42,9 @@ export default function index() {
 
     return (
         <div>
-            <PageHeader title='Listes des lignes élèctriques' subTitle=''
-                button="Ajouter une ligne" buttonLink='add' />
-            <Table {...{ data: lines, columns }} />
+            <PageHeader title='Listes des postes de transformations' subTitle=''
+                button="Ajouter un post" buttonLink='add' />
+            <Table {...{ data: tStations, columns }} />
         </div>
     )
 }

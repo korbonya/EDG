@@ -7,27 +7,27 @@ export default function index() {
     // columns for the table
     const columns = useMemo(() => [
         {
-            header: "Nom",
-            id: "numero",
-            accessorKey: "name",
+            header: "Service",
+            id: "service",
+            accessorKey: "service",
         },
         {
-            header: "Ville/Commune",
-            id: "ville",
-            accessorFn: (row) => row.cityTown,
+            header: "sur",
+            id: "sur",
+            accessorFn: (row) => row.on,
         },
         {
-            header: "Type",
+            header: "Agent",
             id: "type",
-            accessorKey: "type",
+            accessorKey: "agent",
         },
         {
-            header: "Puissance",
-            id: "transformateurs",
+            header: "status",
+            id: "status",
             accessorFn: (row) => `${row.power} MW`,
         },
         {
-            accessorKey: "deployed_at",
+            accessorKey: "date",
             header: "Déployé le",
             id: "deployed_at",
         },
