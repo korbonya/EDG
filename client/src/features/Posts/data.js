@@ -7,8 +7,8 @@ export const posts = [
         town: 'Ratoma',
         district: 'Lambanyi',
         geoCoords: {
-            lat: 9.639911,
-            lng: -13.61581
+            lat: 9.5092,
+            lng: -13.7122
         },
         address: 'Rue 1, Quartier 1, Commune 1',
         type: 'Residential',
@@ -26,8 +26,8 @@ export const posts = [
         town: 'Kaloum',
         district: 'Kaloum 1',
         geoCoords: {
-            lat: 9.625411,
-            lng: -13.62
+            lat:8.5667,
+            lng: -10.1333
         },
         address: 'Rue 2, Quartier 2, Commune 2',
         type: 'Residential',
@@ -45,8 +45,8 @@ export const posts = [
         town: 'Dixin',
         district: 'Dixin 1',
         geoCoords: {
-            lat: 9.625411,
-            lng: -13.62564
+            lat: 11.3167,
+            lng: -12.2833
         },
         address: 'Rue 3, Quartier 3, Commune 3',
         type: 'Residential',
@@ -64,8 +64,8 @@ export const posts = [
         town: 'Kaloum',
         district: 'Kaloum 2',
         geoCoords: {
-            lat: 9.645411,
-            lng: -13.655476
+            lat: 10.3736,
+            lng:-12.0847
         },
         address: 'Rue 4, Quartier 4, Commune 4',
         type: 'Residential',
@@ -83,8 +83,8 @@ export const posts = [
         town: 'Kaloum',
         district: 'Kaloum 3',
         geoCoords: {
-            lat: 9.6255411,
-            lng: -13.65476
+            lat:10.3804,
+            lng:-13.5500
         },
         address: 'Rue 5, Quartier 5, Commune 5',
         type: 'Residential',
@@ -102,8 +102,8 @@ export const posts = [
         town: 'Kaloum',
         district: 'Kaloum 4',
         geoCoords: {
-            lat: 9.625411,
-            lng: -13.65476
+            lat: 11.4189,
+            lng: -9.1644
         },
         address: 'Rue 6, Quartier 6, Commune 6',
         type: 'Residential',
@@ -279,5 +279,32 @@ export const tStations = [
         output: 1000,
         deployed_at: '2003-01-01',
         date_last_renovation: '2019-01-01',
+    },
+]
+
+export const maintenances = [
+    {
+        id: 1,
+        service: 'test',
+        on: 'T000124',
+        agent: 'Moussa Touré',
+        date: '2020-01-01',
+        description: 'les service de maintenance ont fait un test',
+    },
+    {
+        id: 2,
+        service: 'depannage',
+        on: 'T000124',
+        agent: 'Mamadou Diallo',
+        date: '2020-01-01',
+        description: 'les service de maintenance ont fait un test',
+    },
+    {
+        id: 3,
+        service: 'depannage',
+        on: 'T000124',
+        agent: 'Mariama Diallo',
+        date: '2020-01-01',
+        description: 'les service de maintenance ont fait un test',
     },
 ]

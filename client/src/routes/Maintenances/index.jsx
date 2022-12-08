@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import { PageHeader } from "../../components/Pages"
 import { Table, ActionButtons } from "../../components/Tables"
-import { powerStations } from "../../features/Posts/data"
+import { maintenances } from "../../features/Posts/data"
 
 export default function index() {
     // columns for the table
@@ -18,18 +18,14 @@ export default function index() {
         },
         {
             header: "Agent",
-            id: "type",
+            id: "agent",
             accessorKey: "agent",
         },
-        {
-            header: "status",
-            id: "status",
-            accessorFn: (row) => `${row.power} MW`,
-        },
+    
         {
             accessorKey: "date",
-            header: "Déployé le",
-            id: "deployed_at",
+            header: "Date",
+            id: "date",
         },
         {
             accessorKey: 'id',
@@ -44,7 +40,7 @@ export default function index() {
         <div>
             <PageHeader title='Listes des centrales élèctriques' subTitle=''
                 button="Ajouter une centrale" buttonLink='add' />
-            <Table {...{ data: powerStations, columns }} />
+            <Table {...{ data: maintenances, columns }} />
         </div>
     )
 }

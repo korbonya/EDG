@@ -1,0 +1,23 @@
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+  }
+  
+  .custom-icon {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  
+  .leaflet-marker-icon i::before {
+    color: var(--mycolor);
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -10px;
+  }

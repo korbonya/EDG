@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
 import { posts } from "../../features/Posts/data"
+import {customMarkerIcon} from '../../components/Icon'
 
 
 export default function index() {
@@ -9,6 +10,7 @@ export default function index() {
     console.log('posts:;', posts)
     return (
         <div>
+            <FontAwesomeIcon icon="fa-solid fa-spinner" className="highlight" />
             <div id='map' className="h-64">
                 <MapContainer center={center} zoom={7} scrollWheelZoom={true}>
                     <TileLayer
@@ -19,7 +21,12 @@ export default function index() {
                  <MarkerClusterGroup>
                  {posts.map(post => (
                          <Fragment key={post.id}>
-                         <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}>
+                         <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}
+                           icon={customMarkerIcon(
+                            '#ee1100',
+                             'fa fa-user'
+                         )}
+                         >
                              <Popup>
                                  <div className="flex flex-col">
                                      <h4 className="text-sm font-semibold">{post.register_number}</h4>
