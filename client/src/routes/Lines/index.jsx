@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import { PageHeader } from "../../components/Pages"
 import { Table, ActionButtons } from "../../components/Tables"
-import { posts } from "../../features/Posts/data"
+import { lines } from "../../features/Posts/data"
 
 export default function index() {
     // columns for the table
@@ -9,22 +9,22 @@ export default function index() {
         {
             header: "Numero de ligne",
             id: "numero",
-            accessorKey: "register_number",
+            accessorKey: "number_register",
         },
         {
             header: "Départ-arrivée",
             id: "ville",
-            accessorFn: (row) => [row.city, row.town].join(" / "),
+            accessorFn: (row) => row.startEnd,
         },
         {
             header: "Tension",
-            id: "type",
-            accessorKey: "type",
+            id: "tension",
+            accessorKey: "voltage",
         },
         {
-            header: "Transformateurs",
-            id: "transformateurs",
-            accessorFn: (row) => `actifs ${row.transformers.actives}, inactifs ${row.transformers.inactives}`,
+            header: "longeur",
+            id: "longeur",
+            accessorFn: (row) => `${row.length} km`,
         },
         {
             accessorKey: "deployed_at",
@@ -44,7 +44,7 @@ export default function index() {
         <div>
             <PageHeader title='Listes des lignes élèctriques' subTitle=''
                 button="Ajouter une ligne" buttonLink='add' />
-            <Table {...{ data: posts, columns }} />
+            <Table {...{ data: lines, columns }} />
         </div>
     )
 }
