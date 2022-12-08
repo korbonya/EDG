@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import { PageHeader } from "../../components/Pages"
 import { Table, ActionButtons } from "../../components/Tables"
-import { posts } from "../../features/Posts/data"
+import { powerStations } from "../../features/Posts/data"
 
 export default function index() {
     // columns for the table
@@ -9,12 +9,12 @@ export default function index() {
         {
             header: "Nom",
             id: "numero",
-            accessorKey: "register_number",
+            accessorKey: "name",
         },
         {
             header: "Ville/Commune",
             id: "ville",
-            accessorFn: (row) => [row.city, row.town].join(" / "),
+            accessorFn: (row) => row.cityTown,
         },
         {
             header: "Type",
@@ -24,7 +24,7 @@ export default function index() {
         {
             header: "Puissance",
             id: "transformateurs",
-            accessorFn: (row) => `actifs ${row.transformers.actives}, inactifs ${row.transformers.inactives}`,
+            accessorFn: (row) => `${row.power} MW`,
         },
         {
             accessorKey: "deployed_at",
@@ -44,7 +44,7 @@ export default function index() {
         <div>
             <PageHeader title='Listes des centrales élèctriques' subTitle=''
                 button="Ajouter un pylône" buttonLink='add' />
-            <Table {...{ data: posts, columns }} />
+            <Table {...{ data: powerStations, columns }} />
         </div>
     )
 }
