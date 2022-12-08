@@ -10,6 +10,7 @@ const Posts = lazy(() => import("./routes/Posts"));
 const AddPost = lazy(() => import("./routes/Posts/add"));
 const DetailsPost = lazy(() => import("./routes/Posts/Details"));
 const Map = lazy(() => import("./routes/Map"));
+const Lines = lazy(() => import("./routes/Lines"));
 
 
 export const router = createBrowserRouter([
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
             {
                 path: "map",
                 element: <Suspense> <Map /> </Suspense>,
+            },
+            {
+                path: "lines",
+                element: <Suspense> <Lines /> </Suspense>,
             },
         ]
     },

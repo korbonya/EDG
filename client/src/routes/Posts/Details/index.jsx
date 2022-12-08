@@ -89,26 +89,26 @@ export default function index() {
                                                 />
                                             </Disclosure.Button>
                                             <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
-                                              <table className="table-auto w-full">
-                                                <thead>
-                                                    <tr>
-                                                        <th className="px-4 py-2">Nom</th>
-                                                        <th className="px-4 py-2">Puissance</th>
-                                                        <th className="px-4 py-2">Etat</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td className="border px-4 py-2">TR02134</td>
-                                                        <td className="border px-4 py-2">440 KV</td>
-                                                        <td className="border px-4 py-2">
-                                                            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                                                                Actif
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                <table className="table-auto w-full">
+                                                    <thead>
+                                                        <tr>
+                                                            <th className="px-4 py-2">Nom</th>
+                                                            <th className="px-4 py-2">Puissance</th>
+                                                            <th className="px-4 py-2">Etat</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td className="border px-4 py-2">TR02134</td>
+                                                            <td className="border px-4 py-2">440 KV</td>
+                                                            <td className="border px-4 py-2">
+                                                                <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
+                                                                    Actif
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </Disclosure.Panel>
                                         </>
                                     )}
@@ -144,7 +144,7 @@ export default function index() {
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                            
+
                                             </Disclosure.Panel>
                                         </>
                                     )}
