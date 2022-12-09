@@ -9,7 +9,11 @@ const MenuItem = ({ item }) => {
             }
             aria-current={item.current ? 'page' : undefined}
         >
-            <item.icon className="mr-4 flex-shrink-0 h-6 w-6 text-yellow-200" aria-hidden="true" />
+            <div className="w-6 h-6 mr-4">
+            <item.icon className={({ isActive }) =>
+                isActive ? ' text-white w-6 h-6' : 'w-6 h-6 text-yellow-100 hover:text-white '
+            } aria-hidden="true" />
+            </div>
             {item.name}
         </NavLink>
     );
