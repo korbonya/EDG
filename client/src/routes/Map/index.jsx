@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import MarkerClusterGroup from 'react-leaflet-cluster'
-import { posts } from "../../features/Posts/data"
+import { posts, powerStations, tStations } from "../../features/Posts/data"
 import {customMarkerIcon} from '../../components/Icon'
 
 
@@ -18,7 +18,8 @@ export default function index() {
                     />
 
                  <MarkerClusterGroup>
-                 {posts.map(post => (
+                    <>
+                      {posts.map(post => (
                          <Fragment key={post.id}>
                          <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}
                            icon={customMarkerIcon(
@@ -37,6 +38,49 @@ export default function index() {
                      </Fragment>
                     ))
                     }
+                    {
+                        powerStations.map(post => (
+                            <Fragment key={post.id}>
+                            <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}
+                                icon={customMarkerIcon(
+                                    '#ee1',
+                                    'fa fa-bolt'
+                                )}
+                            >
+                                <Popup>
+                                    <div className="flex flex-col">
+                                        <h4 className="text-sm font-semibold">{post.name}</h4>
+                                        <p className="text-xs text-gray-500">{post.type}</p>
+                                        <h1 className="text-xs text-gray-500">{post.address}</h1>
+                                    </div>
+                                </Popup>
+                            </Marker>
+                        </Fragment>
+                          ))
+                    }
+                    {
+                        tStations.map(post => (
+                            <Fragment key={post.id}>
+                            <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}
+                                icon={customMarkerIcon( 
+                                    '#a14ff1',
+                                    'fa fa-bolt'
+                                )}
+                            >
+                                <Popup>
+                                    <div className="flex flex-col">
+                                        <h4 className="text-sm font-semibold">{post.number_register}</h4>
+                                        <p className="text-xs text-gray-500">{post.input}</p>
+                                        <h1 className="text-xs text-gray-500">{post.output}</h1>
+                                    </div>
+                                </Popup>
+                            </Marker>
+                        </Fragment>
+                            ))
+                    }
+
+                    </>
+               
                 </MarkerClusterGroup>
 
                 </MapContainer>

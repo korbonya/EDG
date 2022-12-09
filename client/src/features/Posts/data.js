@@ -169,7 +169,7 @@ export const powerStations = [
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
             lat: 9.625411,
-            lng: -13.62
+            lng: -13.12
         },
         address: 'Rue 2, Quartier 2, Commune 2',
         deployed_at: '2003-01-01',
@@ -183,8 +183,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Ratoma',
         geoCoords: {
-            lat: 9.639911,
-            lng: -13.61581
+            lat: 9.539911,
+            lng: -12.61581
         },
         address: 'Rue 1, Quartier 1, Commune 1',
         deployed_at: '2003-01-01',
@@ -198,8 +198,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Dixin',
         geoCoords: {
-            lat: 9.625411,
-            lng: -13.62564
+            lat: 10.625411,
+            lng: -11.62564
         },
         address: 'Rue 3, Quartier 3, Commune 3',
         deployed_at: '2003-01-01',
@@ -244,7 +244,7 @@ export const tStations = [
         address: 'T6 rond point',
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 9.625411,
+            lat: 12.625411,
             lng: -13.62
         },
         input: 2000,
@@ -258,8 +258,8 @@ export const tStations = [
         address: 'T6 rond point',
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 9.625411,
-            lng: -13.62
+            lat: 11.625411,
+            lng: -12.62
         },
         input: 2000,
         output: 1000,
@@ -273,7 +273,7 @@ export const tStations = [
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
             lat: 9.625411,
-            lng: -13.62
+            lng: -14.2
         },
         input: 2000,
         output: 1000,
