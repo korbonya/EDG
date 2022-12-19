@@ -134,7 +134,7 @@ export default function index() {
           </div>
         </div>
 
-        <div className="bg-yellow-700 shadow-md rounded-md p-4">
+        <div className="bg-gradient-to-r from-yellow-500 to-green-500 shadow-md rounded-md p-4">
           <div className="flex flex-col justify-center items-center h-full">
             <h1 className="text-white text-2xl font-bold">11 750 km</h1>
             <h1 className="text-white text-md font-semibold">de lignes Électriques</h1>

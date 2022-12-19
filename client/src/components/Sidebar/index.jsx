@@ -32,8 +32,8 @@ const navigation = [
     { end: false, name: 'Postes de tranformation', href: 'tstations', icon: HomeModernIcon, current: false},
     {end : false, name: 'Centrales Elèctriques', href: 'powers', icon: HomeIcon, current: false},
     { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
-    { end: false, name: 'Utisateurs', href: 'utisateurs', icon: UserGroupIcon, current: false },
-    { end: false, name: 'Parametres', href: 'setting', icon: CogIcon, current: false },
+    { end: false, name: 'Agents', href: 'agents', icon: UserGroupIcon, current: false },
+    { end: false, name: 'Parametres', href: 'settings', icon: CogIcon, current: false },
 ]
 const secondaryNavigation = [
     { end: false, name: 'Aide', href: '/confidentialite', icon: QuestionMarkCircleIcon },

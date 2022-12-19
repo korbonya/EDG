@@ -10,26 +10,31 @@ export default function index() {
             header: "Numero de ligne",
             id: "numero",
             accessorKey: "number_register",
+            width: 200,
         },
         {
             header: "Départ-arrivée",
             id: "ville",
             accessorFn: (row) => row.startEnd,
+            width: 200,
         },
         {
             header: "Tension",
             id: "tension",
             accessorKey: "voltage",
+            width: 200,
         },
         {
             header: "longeur",
             id: "longeur",
             accessorFn: (row) => `${row.length} km`,
+            width: 100,
         },
         {
             accessorKey: "deployed_at",
             header: "Déployé le",
             id: "deployed_at",
+            width: 150,
         },
         {
             accessorKey: 'id',
@@ -37,6 +42,7 @@ export default function index() {
             cell: info => <div className=''>
                 <ActionButtons id={info.getValue()} onDelete={() => onDelete(info.getValue())} />
             </div>,
+            width: 50,
         }
     ], [])
 

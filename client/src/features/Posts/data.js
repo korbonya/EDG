@@ -168,8 +168,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 9.625411,
-            lng: -13.12
+            lat:9.7911,
+            lng: -13.5233
         },
         address: 'Rue 2, Quartier 2, Commune 2',
         deployed_at: '2003-01-01',
@@ -183,8 +183,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Ratoma',
         geoCoords: {
-            lat: 9.539911,
-            lng: -12.61581
+            lat: 10.1850,
+            lng: -14.0430
         },
         address: 'Rue 1, Quartier 1, Commune 1',
         deployed_at: '2003-01-01',
@@ -198,8 +198,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Dixin',
         geoCoords: {
-            lat: 10.625411,
-            lng: -11.62564
+            lat: 7.5660,
+            lng: -9.2533
         },
         address: 'Rue 3, Quartier 3, Commune 3',
         deployed_at: '2003-01-01',
@@ -213,8 +213,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 9.645411,
-            lng: -13.655476
+            lat: 11.2990,
+            lng: -10.7260
         },
         address: 'Rue 4, Quartier 4, Commune 4',
         deployed_at: '2003-01-01',
@@ -228,8 +228,8 @@ export const powerStations = [
         power: 1000,
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 9.6255411,
-            lng: -13.65476
+            lat: 8.6870,
+            lng: -8.6570
         },
         address: 'Rue 5, Quartier 5, Commune 5',
         deployed_at: '2003-01-01',
@@ -244,8 +244,8 @@ export const tStations = [
         address: 'T6 rond point',
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 12.625411,
-            lng: -13.62
+            lat: 7.8000,
+            lng: -8.5333
         },
         input: 2000,
         output: 1000,
@@ -258,8 +258,8 @@ export const tStations = [
         address: 'T6 rond point',
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 11.625411,
-            lng: -12.62
+            lat:10.6333,
+            lng: -8.6833
         },
         input: 2000,
         output: 1000,
@@ -272,8 +272,8 @@ export const tStations = [
         address: 'T6 rond point',
         cityTown: 'Conakry/Kaloum',
         geoCoords: {
-            lat: 9.625411,
-            lng: -14.2
+            lat: 11.1833,
+            lng:-12.9333
         },
         input: 2000,
         output: 1000,

@@ -14,6 +14,7 @@ const Lines = lazy(() => import("./routes/Lines"));
 const PowerStations = lazy(() => import("./routes/PowerStation"));
 const TransformersStations = lazy(() => import("./routes/TransfomerStation"));
 const Maintenances = lazy(() => import("./routes/Maintenances"));
+const Settings = lazy(() => import("./routes/Settings"));
 
 
 export const router = createBrowserRouter([
@@ -56,6 +57,10 @@ export const router = createBrowserRouter([
             {
                 path: "maintenances",
                 element: <Suspense> <Maintenances /> </Suspense>,
+            },
+            {
+                path: "settings",
+                element: <Suspense> <Settings /> </Suspense>,
             },
 
 

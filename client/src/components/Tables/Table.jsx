@@ -73,7 +73,10 @@ export default function Table({
                   <th 
                   key={header.id}
                   colSpan={header.colSpan}
-                  style={{ position: 'relative', width: header.getSize() }}
+                  style={{
+                    width: header.getSize() !== 0 ? header.getSize() : undefined,
+                }}
+                  // style={{ position: 'relative', width: header.getSize() }}
                   className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
                      {header.isPlaceholder
                       ? null
@@ -102,7 +105,12 @@ export default function Table({
               <tr key={row.id} className="relative hover:bg-gray-50 hover:shadow hover:border-b-0">
                 {row.getVisibleCells().map(cell => {
                   return (
-                    <td key={cell.id} style={{ width: cell.column.getSize() }}
+                    <td key={cell.id}  style={{
+                      width:
+                        cell.column.getSize() !== 0
+                          ? cell.column.getSize()
+                          : undefined,
+                    }}
                      className=" px-6 py-3 truncate whitespace-nowrap z-0">
                       {flexRender(
                         cell.column.columnDef.cell,
