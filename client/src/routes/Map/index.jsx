@@ -21,16 +21,16 @@ export default function index() {
                         <>
                             {posts.map(post => (
                                 <Fragment key={post.id}>
-                                    <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}
+                                    <Marker position={[post.location.latitude, post.location.longitude]}
                                         icon={customMarkerIcon(
                                             '#ee1100'
                                         )}
                                     >
                                         <Popup>
                                             <div className="flex flex-col">
-                                                <h4 className="text-sm font-semibold">{post.register_number}</h4>
-                                                <p className="text-xs text-gray-500">{post.type}</p>
-                                                <h1 className="text-xs text-gray-500">{post.address}</h1>
+                                                <h4 className="text-sm font-semibold">{post.name}</h4>
+                                                <p className="text-xs text-gray-500">{post.voltageLevel}</p>
+                                                <h1 className="text-xs text-gray-500">{post.location.address}</h1>
                                             </div>
                                         </Popup>
                                     </Marker>

@@ -26,7 +26,7 @@ export function ActionButtons({ id, onDelete }) {
                                 {({ active }) => (
                                     <Link
                                         to={`12`}
-                                        className={`${active ? 'bg-yellow-200 text-gray-700' : 'text-gray-900'
+                                        className={`${active ? 'bg-green-200 text-gray-700' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -48,7 +48,7 @@ export function ActionButtons({ id, onDelete }) {
                                 {({ active }) => (
                                     <Link
                                         onClick={onDelete}
-                                        className={`${active ? 'bg-yellow-200 text-gray-700' : 'text-gray-900'
+                                        className={`${active ? 'bg-green-200 text-gray-700' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (
@@ -71,7 +71,7 @@ export function ActionButtons({ id, onDelete }) {
                                 {({ active }) => (
                                     <button
                                         onClick={onDelete}
-                                        className={`${active ? 'bg-yellow-200 text-gray-700' : 'text-gray-900'
+                                        className={`${active ? 'bg-green-200 text-gray-700' : 'text-gray-900'
                                             } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {active ? (

@@ -12,7 +12,7 @@ import {
     XMarkIcon,
     Bars3Icon,
     ChartBarIcon,
-    MagnifyingGlassIcon, 
+    MagnifyingGlassIcon,
     MapIcon,
     WrenchIcon,
 } from '@heroicons/react/24/outline'
@@ -27,10 +27,10 @@ const classNames = (...classes) => {
 const navigation = [
     { end: true, name: 'Tableau de board', href: '/', icon: ChartBarIcon, current: true },
     { end: true, name: 'Carte', href: 'map', icon: MapIcon, current: false },
-    { end: false, name: 'pylônes', href: 'posts', icon: ListBulletIcon, current: false },
-    { end: false, name: 'Lignes Électriques', href: 'lines', icon: MagnifyingGlassIcon, current: false},
-    { end: false, name: 'Postes de tranformation', href: 'tstations', icon: HomeModernIcon, current: false},
-    {end : false, name: 'Centrales Elèctriques', href: 'powers', icon: HomeIcon, current: false},
+    { end: false, name: 'Postes', href: 'posts', icon: ListBulletIcon, current: false },
+    // { end: false, name: 'Lignes Électriques', href: 'lines', icon: MagnifyingGlassIcon, current: false},
+    // { end: false, name: 'Postes de tranformation', href: 'tstations', icon: HomeModernIcon, current: false},
+    { end: false, name: 'Centrales Elèctriques', href: 'powers', icon: HomeIcon, current: false },
     { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
     { end: false, name: 'Agents', href: 'agents', icon: UserGroupIcon, current: false },
     { end: false, name: 'Parametres', href: 'settings', icon: CogIcon, current: false },
@@ -68,7 +68,7 @@ const Sidebar = ({ children }) => {
                         leaveFrom="translate-x-0"
                         leaveTo="-translate-x-full"
                     >
-                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-yellow-700">
+                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-green-700">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-in-out duration-300"
@@ -90,12 +90,12 @@ const Sidebar = ({ children }) => {
                                 </div>
                             </Transition.Child>
                             <div className="flex-shrink-0 flex items-center px-4">
-                                <div className="flex items-center justify-center py-3 my-5 bg-yellow-50">
-                                   <h1 className='text-lg'>EDG</h1>
+                                <div className="flex items-center justify-center py-3 my-5 bg-green-50">
+                                    <img src="http://placehold.it/100x100" alt="logo" className="w-10 h-10 rounded-full" />
                                 </div>
                             </div>
                             <nav
-                                className="mt-5 flex-shrink-0 h-full divide-y divide-yellow-800 overflow-y-auto"
+                                className="mt-5 flex-shrink-0 h-full divide-y divide-green-800 overflow-y-auto"
                                 aria-label="Sidebar"
                             >
                                 <div className="px-2 space-y-1">
@@ -105,15 +105,7 @@ const Sidebar = ({ children }) => {
                                         </Fragment>
                                     ))}
                                 </div>
-                                {/* <div className="mt-6 pt-6">
-                                    <div className="px-2 space-y-1">
-                                        {secondaryNavigation.map((item) => (
-                                            <Fragment key={item.name}>
-                                                <MenuItem item={item} />
-                                            </Fragment>
-                                        ))}
-                                    </div>
-                                </div> */}
+
                             </nav>
                         </div>
                     </Transition.Child>
@@ -126,13 +118,14 @@ const Sidebar = ({ children }) => {
             {/* Static sidebar for desktop */}
             <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
                 {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex flex-col flex-grow bg-yellow-700 pt-5 pb-4 overflow-y-auto">
+                <div className="flex flex-col flex-grow  bg-gradient-to-b from-green-900 to-green-700 pt-5 pb-4 overflow-y-auto">
                     <div className="px-4">
-                        <div className="flex items-center justify-center py-3 my-5 bg-yellow-50">
-                        <h1 className='text-lg'>EDG</h1>
+                        <div className="flex items-center justify-center px-4 rounded-lg py-2  mb-5 bg-gray-100 ">
+                            <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />
+                            <h1 className="text-gray-600 uppercase text-center text-lg font-bold ml-2">électricite de Guinée</h1>
                         </div>
                     </div>
-                    <nav className="mt-5 flex-1 flex flex-col divide-y divide-yellow-800 overflow-y-auto" aria-label="Sidebar">
+                    <nav className="mt-5 flex-1 flex flex-col divide-y divide-green-800 overflow-y-auto" aria-label="Sidebar">
                         <div className="px-2 space-y-1">
                             {navigation.map((item, index) => (
                                 <Fragment key={index}>
@@ -154,10 +147,10 @@ const Sidebar = ({ children }) => {
             </div>
 
             <div className="lg:pl-64 flex flex-col flex-1">
-                <div className="relative z-10 flex-shrink-0 flex h-14 bg-white border-b border-gray-200 lg:border-none">
+                <div className="relative z-10 flex-shrink-0 flex h-10 bg-white border-b border-gray-200 lg:border-none">
                     <button
                         type="button"
-                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500 lg:hidden"
+                        className="px-4 border-r border-gray-200 text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500 lg:hidden"
                         onClick={() => setSidebarOpen(true)}
                     >
                         <span className="sr-only">Open sidebar</span>
@@ -187,7 +180,7 @@ const Sidebar = ({ children }) => {
                         <div className="ml-4 flex items-center md:ml-6">
                             {/* <button
                                 type="button"
-                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+                                className="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
                             >
                                 <span className="sr-only">voir les notifications</span>
                                 <HomeIcon className="h-6 w-6" aria-hidden="true" />
@@ -196,7 +189,7 @@ const Sidebar = ({ children }) => {
                             {/* Profile dropdown */}
                             <Menu as="div" className="ml-3 relative">
                                 <div>
-                                    <Menu.Button className="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50">
+                                    <Menu.Button className="max-w-xs rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500  lg:rounded-md lg:hover:bg-gray-50">
                                         <img
                                             className="h-8 w-8 rounded-full"
                                             src="https://duux.com/wp-content/uploads/2019/12/68824649-man-standaard-placeholder-avatar-profiel-gray-picture-ge%C3%AFsoleerd-op-witte-achtergrond-voor-uw-ontwerp-.jpg"

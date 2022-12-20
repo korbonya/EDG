@@ -7,29 +7,29 @@ export default function index() {
     // columns for the table
     const columns = useMemo(() => [
         {
-            header: "Numero d'en.",
+            header: "Nom du Poste",
             id: "numero",
-            accessorKey: "register_number",
+            accessorKey: "name",
         },
         {
-            header: "Ville/Commune",
-            id: "ville",
-            accessorFn: (row) => [row.city, row.town].join(" / "),
+            header: "Tension",
+            id: "tension",
+            accessorKey:"voltageLevel",
         },
         {
-            header: "Type",
-            id: "type",
-            accessorKey: "type",
+            header: "Lignes",
+            id: "lines",
+            accessorFn:(row) => row.lines.join(', '),
         },
         {
-            header: "Transformateurs",
-            id: "transformateurs",
-            accessorFn: (row) => `actifs ${row.transformers.actives}, inactifs ${row.transformers.inactives}`,
+            header: "Dernier M.",
+            id: "maintenance",
+            accessorFn: (row) => row.maintenance.lastMaintenanceDate,
         },
         {
-            accessorKey: "deployed_at",
-            header: "Déployé le",
-            id: "deployed_at",
+            accessorFn: (row) => row.status.inService ? "En service" : "Hors service",
+            header: "Status",
+            id: "status",
         },
         {
             accessorKey: 'id',
@@ -42,7 +42,7 @@ export default function index() {
 
     return (
         <div>
-            <PageHeader title='Listes des pylônes' subTitle='Informations sur les pylônes et les transformateurs'
+            <PageHeader title='Listes des poste de transformations' subTitle='Informations sur les postes et les transformateurs'
                 button="Ajouter un pylône" buttonLink='add' />
             <Table {...{ data: posts, columns }} />
         </div>
