@@ -9,7 +9,7 @@ export default function index() {
     const center = [10.854993, -10.848677];
     console.log('posts:;', posts)
     return (
-        <div>
+        <div className='relative z-0'>
             <div id='map' className="h-64">
                 <MapContainer center={center} zoom={7} scrollWheelZoom={true}>
                     <TileLayer
@@ -29,8 +29,19 @@ export default function index() {
                                         <Popup>
                                             <div className="flex flex-col">
                                                 <h4 className="text-sm font-semibold">{post.name}</h4>
-                                                <p className="text-xs text-gray-500">{post.voltageLevel}</p>
-                                                <h1 className="text-xs text-gray-500">{post.location.address}</h1>
+                                                <p className="text-xs text-gray-500">
+                                                    Tension: {post.voltageLevel}
+                                                </p>
+                                                <div className="">
+                                                    <h1 className="text-xs text-gray-500">
+                                                        Nombre de trnasformateurs
+                                                    </h1>
+                                                    <tr className=''>
+                                                        <td>Actifs: 2</td>
+                                                        <td>Inactifs 0</td>
+                                                    </tr>
+                                                </div>
+                                                <p className='text-sm text-gray-600'>Lignes: <span className='font-bold'>{post.lines}</span></p>
                                             </div>
                                         </Popup>
                                     </Marker>
