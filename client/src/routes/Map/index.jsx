@@ -28,12 +28,12 @@ export default function index() {
                                     >
                                         <Popup>
                                             <div className="flex flex-col">
-                                                <h4 className="text-sm font-semibold">{post.name}</h4>
-                                                <p className="text-xs text-gray-500">
+                                                <h4 className="text-xl font-semibold">{post.name}</h4>
+                                                <p className="text-sm text-gray-500">
                                                     Tension: {post.voltageLevel}
                                                 </p>
                                                 <div className=" w-full">
-                                                    <h1 className="text-xs text-gray-500">
+                                                    <h1 className="text-sm text-gray-500">
                                                         Nombre de trnasformateurs
                                                     </h1>
                                                     <div className='mt-2'>
@@ -41,7 +41,7 @@ export default function index() {
                                                         <span className='border-2 px-2 py-1 rounded-full'>Inactifs: 2</span>
                                                     </div>
                                                 </div>
-                                                <p className='text-sm text-gray-600'>Lignes: <span className='font-bold'>{post.lines}</span></p>
+                                                <p className='text-sm text-gray-600'>Lignes: <span className='font-semibold'>{post.lines}</span></p>
                                             </div>
                                         </Popup>
                                     </Marker>
