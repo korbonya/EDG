@@ -1,4 +1,5 @@
 import { Tab } from '@headlessui/react';
+import { Table } from '../../components/Tables';
 
 export default function index() {
     return (
