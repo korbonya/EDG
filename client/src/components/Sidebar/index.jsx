@@ -31,7 +31,7 @@ const navigation = [
     // { end: false, name: 'Lignes Électriques', href: 'lines', icon: MagnifyingGlassIcon, current: false},
     // { end: false, name: 'Postes de tranformation', href: 'tstations', icon: HomeModernIcon, current: false},
     { end: false, name: 'Centrales Elèctriques', href: 'powers', icon: HomeIcon, current: false },
-    { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
+    // { end: false, name: 'Maintenances', href: 'maintenances', icon: WrenchIcon, current: false },
     { end: false, name: 'Agents', href: 'agents', icon: UserGroupIcon, current: false },
     { end: false, name: 'Parametres', href: 'settings', icon: CogIcon, current: false },
 ]
@@ -91,7 +91,7 @@ const Sidebar = ({ children }) => {
                             </Transition.Child>
                             <div className="flex-shrink-0 flex items-center px-4">
                                 <div className="flex items-center justify-center py-3 my-5 bg-green-50">
-                                    <img src="http://placehold.it/100x100" alt="logo" className="w-10 h-10 rounded-full" />
+                                    <img src="http://placehold.it/100x100" alt="logo" className="w-10 h-10 rounded-lg" />
                                 </div>
                             </div>
                             <nav
@@ -120,8 +120,8 @@ const Sidebar = ({ children }) => {
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex flex-col flex-grow  bg-gradient-to-b from-green-900 to-green-700 pt-5 pb-4 overflow-y-auto">
                     <div className="px-4">
-                        <div className="flex items-center justify-center px-4 rounded-lg py-2  mb-5 bg-gray-100 ">
-                            <img src={logo} alt="logo" className="w-12 h-12 rounded-full" />
+                        <div className="flex items-center justify-center px-4 rounded-lg py-2  mb-5 bg-gray-100 bg-opacity-80">
+                            <img src={logo} alt="logo" className="w-12 h-12 rounded-lg" />
                             <h1 className="text-gray-600 uppercase text-center text-lg font-bold ml-2">électricite de Guinée</h1>
                         </div>
                     </div>

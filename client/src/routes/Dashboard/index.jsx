@@ -26,7 +26,7 @@ ChartJS.register(
 export const options = {
   responsive: true,
   interaction: {
-    mode: 'index',  
+    mode: 'index',
     intersect: false,
   },
   stacked: false,
@@ -134,18 +134,111 @@ export default function index() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-green-500 to-green-500 shadow-md rounded-md p-4">
+        <div className="bg-gradient-to-r from-green-700 to-green-500 shadow-md rounded-md p-4">
           <div className="flex flex-col justify-center items-center h-full">
-            <h1 className="text-white text-2xl font-bold">11 750 km</h1>
-            <h1 className="text-white text-md font-semibold">de lignes Électriques</h1>
+            <h1 className="text-white text-2xl font-bold">1200 MW</h1>
+            <h1 className="text-white text-md font-semibold">de Puissance Électriques</h1>
           </div>
         </div>
 
       </div>
-      <div className='grid grid-cols-3 gap-2 mt-5'>
-         <div className='col-span-2 bg-white shadow-md rounded-md p-4'>
-         <Line options={options} data={data} />
-         </div>
+      <div className='grid grid-cols-3 gap-4 mt-10'>
+        <div className='col-span-2 bg-white shadow-md rounded-md p-4'>
+          <Line options={options} data={data} />
+        </div>
+        <div className="relative flex flex-col min-w-0 mb-4 lg:mb-0 break-words bg-white rounded-lg w-full shadow-md">
+          <div className="rounded-t mb-0 px-0 border-0">
+            <div className="flex flex-wrap items-center px-4 py-2">
+              <div className="relative w-full max-w-full flex-grow flex-1">
+                <h3 className="font-semibold text-base text-gray-900">Rapport des interventions</h3>
+              </div>
+            
+            </div>
+            <div className="block w-full overflow-x-auto">
+              <table className="items-center w-full bg-transparent">
+                <thead>
+                  <tr>
+                    <th className="px-4 bg-gray-100  text-gray-500  align-middle py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">type</th>
+                    <th className="px-4 bg-gray-100  text-gray-500  align-middle py-3 text-xs uppercase whitespace-nowrap font-semibold text-left">statistiques</th>
+                    <th className="px-4 bg-gray-100  text-gray-500  align-middle py-3 text-xs uppercase whitespace-nowrap font-semibold text-left min-w-140-px"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-gray-700 ">
+                    <th className="px-4 align-middle text-xs whitespace-nowrap p-4 text-left">Controles</th>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">5,480</td>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">
+                      <div className="flex items-center">
+                        <span className="mr-2">70%</span>
+                        <div className="relative w-full">
+                          <div className="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                            <div className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-600"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="text-gray-700 ">
+                    <th className="px-4 align-middle text-xs whitespace-nowrap p-4 text-left">Réparations</th>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">3,380</td>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">
+                      <div className="flex items-center">
+                        <span className="mr-2">40%</span>
+                        <div className="relative w-full">
+                          <div className="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                            <div className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-500"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="text-gray-700 ">
+                    <th className="px-4 align-middle text-xs whitespace-nowrap p-4 text-left">Incidents</th>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">4,105</td>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">
+                      <div className="flex items-center">
+                        <span className="mr-2">45%</span>
+                        <div className="relative w-full">
+                          <div className="overflow-hidden h-2 text-xs flex rounded bg-pink-200">
+                            <div className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-pink-500"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="text-gray-700 ">
+                    <th className="px-4 align-middle text-xs whitespace-nowrap p-4 text-left">Routine</th>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">4,985</td>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">
+                      <div className="flex items-center">
+                        <span className="mr-2">60%</span>
+                        <div className="relative w-full">
+                          <div className="overflow-hidden h-2 text-xs flex rounded bg-red-200">
+                            <div className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-500"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="text-gray-700 ">
+                    <th className="px-4 align-middle text-xs whitespace-nowrap p-4 text-left">Total</th>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">2,250</td>
+                    <td className="px-4 align-middle text-xs whitespace-nowrap p-4">
+                      <div className="flex items-center">
+                        <span className="mr-2">30%</span>
+                        <div className="relative w-full">
+                          <div className="overflow-hidden h-2 text-xs flex rounded bg-blue-200">
+                            <div className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-blue-700"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>  
       </div>
     </div>
   )

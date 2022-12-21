@@ -87,7 +87,7 @@ export default function index() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                                 </svg>
-                                <h2 className="font-normal">Tensions</h2>
+                                <h2 className="font-light">Tensions</h2>
                             </div>
                             <h1 className="font-semibold"> 20KV, 15V /0.4KV</h1>
                         </div>
@@ -96,7 +96,7 @@ export default function index() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                                 </svg>
-                                <h2 className="font-normal">Type</h2>
+                                <h2 className="font-light">Type</h2>
                             </div>
                             <h1 className="font-semibold">Pylône</h1>
                         </div>
@@ -105,7 +105,7 @@ export default function index() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
                                 </svg>
-                                <h2 className="font-normal">Linges</h2>
+                                <h2 className="font-light">Lignes</h2>
                             </div>
                             <h1 className="font-semibold"> L024, L32</h1>
                         </div>
@@ -115,7 +115,7 @@ export default function index() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                                 </svg>
-                                <h2 className="font-normal">Affecté le</h2>
+                                <h2 className="font-light">Affecté le</h2>
                             </div>
                             <h1 className="font-semibold"> 20 Nov. 2011</h1>
                         </div>
@@ -125,7 +125,7 @@ export default function index() {
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                                 </svg>
-                                <h2 className="font-normal">Déployé le</h2>
+                                <h2 className="font-light">Déployé le</h2>
                             </div>
                             <h1 className="font-semibold"> 20 Nov. 2011</h1>
                         </div>
