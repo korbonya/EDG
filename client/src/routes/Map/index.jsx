@@ -32,14 +32,14 @@ export default function index() {
                                                 <p className="text-xs text-gray-500">
                                                     Tension: {post.voltageLevel}
                                                 </p>
-                                                <div className="">
+                                                <div className=" w-full">
                                                     <h1 className="text-xs text-gray-500">
                                                         Nombre de trnasformateurs
                                                     </h1>
-                                                    <tr className=''>
-                                                        <td>Actifs: 2</td>
-                                                        <td>Inactifs 0</td>
-                                                    </tr>
+                                                    <div className='mt-2'>
+                                                        <span className='mr-2 border-2 px-2 py-1 rounded-full'>Actifs: 2</span>
+                                                        <span className='border-2 px-2 py-1 rounded-full'>Inactifs: 2</span>
+                                                    </div>
                                                 </div>
                                                 <p className='text-sm text-gray-600'>Lignes: <span className='font-bold'>{post.lines}</span></p>
                                             </div>
