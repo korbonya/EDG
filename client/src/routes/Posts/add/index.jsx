@@ -1,5 +1,5 @@
 import { Input } from "../../../components/inputs"
-import { Button } from "../../../components/buttons";
+import { Button } from "../../../components/Buttons";
 
 export default function index() {
     return (
