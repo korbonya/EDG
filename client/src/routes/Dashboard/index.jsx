@@ -83,7 +83,7 @@ export const data = {
 export default function index() {
   return (
     <div className='min-h-full px-10'>
-      <div className="grid grid-cols-4 mt-5  gap-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 mt-5  gap-4">
         <div className="bg-white shadow-md rounded-md p-4">
           <div className="flex justify-between">
             <div className="flex flex-col space-y-2">
@@ -142,7 +142,7 @@ export default function index() {
         </div>
 
       </div>
-      <div className='grid grid-cols-3 gap-4 mt-10'>
+      <div className='grid md:grid-cols-3 gap-4 mt-10'>
         <div className='col-span-2 bg-white shadow-md rounded-md p-4'>
           <Line options={options} data={data} />
         </div>

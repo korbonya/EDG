@@ -68,7 +68,7 @@ const Sidebar = ({ children }) => {
                         leaveFrom="translate-x-0"
                         leaveTo="-translate-x-full"
                     >
-                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-green-700">
+                        <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gradient-to-l from-green-700 to-green-900">
                             <Transition.Child
                                 as={Fragment}
                                 enter="ease-in-out duration-300"
@@ -90,8 +90,9 @@ const Sidebar = ({ children }) => {
                                 </div>
                             </Transition.Child>
                             <div className="flex-shrink-0 flex items-center px-4">
-                                <div className="flex items-center justify-center py-3 my-5 bg-green-50">
-                                    <img src="http://placehold.it/100x100" alt="logo" className="w-10 h-10 rounded-lg" />
+                                <div className="flex items-center justify-center px-4 rounded-lg py-2 mb-5 bg-gradient-to-b from-yellow-50 to-green-100 bg-opacity-80">
+                                    <img src={logo} alt="logo" className="w-12 h-12 rounded-lg" />
+                                    <h1 className="text-gray-600 uppercase text-center text-lg font-bold ml-2">électricite de Guinée</h1>
                                 </div>
                             </div>
                             <nav
@@ -118,9 +119,9 @@ const Sidebar = ({ children }) => {
             {/* Static sidebar for desktop */}
             <div className="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
                 {/* Sidebar component, swap this element with another sidebar if you like */}
-                <div className="flex flex-col flex-grow  bg-gradient-to-b from-green-900 to-green-700 pt-5 pb-4 overflow-y-auto">
+                <div className="flex flex-col flex-grow  bg-gradient-to-l from-green-700 to-green-900 pt-5 pb-4 overflow-y-auto">
                     <div className="px-4">
-                        <div className="flex items-center justify-center px-4 rounded-lg py-2  mb-5 bg-gray-100 bg-opacity-80">
+                        <div className="flex items-center justify-center px-4 rounded-lg py-2 mb-5 bg-gradient-to-b from-yellow-50 to-green-100 bg-opacity-80">
                             <img src={logo} alt="logo" className="w-12 h-12 rounded-lg" />
                             <h1 className="text-gray-600 uppercase text-center text-lg font-bold ml-2">électricite de Guinée</h1>
                         </div>
