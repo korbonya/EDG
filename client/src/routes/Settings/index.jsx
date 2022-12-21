@@ -1,7 +1,60 @@
+import React, {useMemo} from 'react'
 import { Tab } from '@headlessui/react';
 import { Table } from '../../components/Tables';
 
 export default function index() {
+    const data = useMemo(
+        () => [
+            {
+                id: 1,
+                name:"mariama sow",
+                email:"mariama@gmail.com",
+                role:"admin",
+                status:"active",
+            },
+            {
+                id: 2,
+                name:"Aminata sow",
+                email:"aminata@gmail.com",
+                role:"admin",
+                status:"active",
+            },
+            {
+                id: 3,
+                name:"Diouldé Ly ",
+                email:"diouldé@gmail.com",
+                role:"admin",
+                status:"active",
+            },
+        ],
+        []
+    );
+
+    const columns = useMemo(
+        () => [
+            {
+                Header: 'Nom',
+                id: 'Nom',
+                accessorkey: 'name',
+            },
+            {
+                Header: 'Email',
+                id: 'Email',
+                accessorkey: 'email',
+            },
+            {
+                Header: 'Role',
+                id: 'Role',
+                accessorkey: 'role',
+            },
+            {
+                Header: 'Status',
+                id: 'Status',
+                accessorkey: 'status',
+            },
+        ],[]
+    );
+
     return (
         <div>
             <header className=" px-4 py-3 ">
@@ -27,32 +80,9 @@ export default function index() {
                                 <button className="px-4 py-2 font-bold text-gray-50 bg-green-500 rounded-sm hover:bg-green-400 focus:outline-none focus:shadow-outline-green">
                                     Ajouter un utilisateur
                                 </button>
-                                <table className="w-full mt-6 text-gray-600">
-                                    <thead>
-                                        <tr>
-                                            <th className="px-4 py-2 font-bold text-left">Name</th>
-                                            <th className="px-4 py-2 font-bold text-left">Email</th>
-                                            <th className="px-4 py-2 font-bold text-left">Role</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td className="border px-4 py-2">John Doe</td>
-                                            <td className="border px-4 py-2">johndoe@example.com</td>
-                                            <td className="border px-4 py-2">Admin</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="border px-4 py-2">Jane Smith</td>
-                                            <td className="border px-4 py-2">janesmith@example.com</td>
-                                            <td className="border px-4 py-2">User</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="border px-4 py-2">Bob Johnson</td>
-                                            <td className="border px-4 py-2">bobjohnson@example.com</td>
-                                            <td className="border px-4 py-2">User</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                              <div>
+                                <Table columns={columns} data={data} />
+                              </div>
                             </div>
 
                         </Tab.Panel>
