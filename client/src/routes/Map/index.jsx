@@ -55,7 +55,7 @@ export default function index() {
                                     </Fragment>
                                 ))
                             }
-                            {
+                            {/* {
                                 tStations.map(post => (
                                     <Fragment key={post.id}>
                                         <Marker position={[post.geoCoords.lat, post.geoCoords.lng]}
@@ -73,7 +73,7 @@ export default function index() {
                                         </Marker>
                                     </Fragment>
                                 ))
-                            }
+                            } */}
 
                         </>
 
