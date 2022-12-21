@@ -65,16 +65,16 @@ export default function Table({
           placeholder="Rechercher"
         />
       <table className='w-full relative z-0 table-fixed divide-y divide-gray-200 mx-4'>
-        <thead>
+        <thead className='text-gray-700 uppercase bg-gray-50 '>
           {table.getHeaderGroups().map(headerGroup => (
-            <tr key={headerGroup.id} className="bg-gray-50">
+            <tr key={headerGroup.id}>
               {headerGroup.headers.map(header => {
                 return (
                   <th 
                   key={header.id}
                   colSpan={header.colSpan}
                   style={{ position: 'relative', width: header.getSize() }}
-                  className="px-6 py-2 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">
+                  className="px-6 py-2 text-left text-sm font-bold text-gray-700 uppercase tracking-wider">
                      {header.isPlaceholder
                       ? null
                       : flexRender(

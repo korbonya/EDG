@@ -43,7 +43,7 @@ export default function index() {
     return (
         <div>
             <PageHeader title='Listes des poste de transformations' subTitle='Informations sur les postes et les transformateurs'
-                button="Ajouter un pylône" buttonLink='add' />
+                button="Ajouter un poste" buttonLink='add' />
             <Table {...{ data: posts, columns }} />
         </div>
     )
