@@ -14,10 +14,10 @@ export default function index() {
                         <Input label={'addresse'} placeholder='addresse' />
                         <Input label={'Puissance nominal'} placeholder='Puissance du poste' />
                         <Input label={'Tension'} placeholder='Tension du poste' />
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 gap-2">
                             <div>
                                 <label className="text-sm font-medium text-gray-600" htmlFor="city">Ville</label>
-                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 focus:outline-none focus:border-green-500'>
+                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 mt-2 focus:outline-none focus:border-green-500'>
                                     <option value=''>Choisir une ville</option>
                                     <option value=''>Conakry</option>
                                     <option value=''>Boké</option>
@@ -30,7 +30,7 @@ export default function index() {
                             {/* select the commune */}
                             <div>
                                 <label className="text-sm font-medium text-gray-600" htmlFor="commune">Commune</label>
-                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 focus:outline-none focus:border-green-500'>
+                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 mt-2 focus:outline-none focus:border-green-500'>
                                     <option value=''>Choisir une commune</option>
                                     <option value=''>Conakry</option>
                                     <option value=''>Boké</option>
@@ -43,7 +43,7 @@ export default function index() {
                             {/* select the quartier */}
                             <div>
                                 <label className="text-sm font-medium text-gray-600" htmlFor="quartier">Quartier</label>
-                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 focus:outline-none focus:border-green-500'>
+                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 mt-2 focus:outline-none focus:border-green-500'>
                                     <option value=''>Choisir un quartier</option>
                                     <option value=''>Conakry</option>
                                     <option value=''>Boké</option>
@@ -56,7 +56,7 @@ export default function index() {
                             {/* select the type  */}
                             <div>
                                 <label className="text-sm font-medium text-gray-600" htmlFor="type">Type</label>
-                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 focus:outline-none focus:border-green-500'>
+                                <select className='border border-gray-300 w-full rounded-md px-4 py-2 mt-2 focus:outline-none focus:border-green-500'>
                                     <option value=''>Choisir un type</option>
                                     <option value=''>Residentiel</option>
                                     <option value=''>Commercial</option>
