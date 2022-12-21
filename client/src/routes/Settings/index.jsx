@@ -33,24 +33,24 @@ export default function index() {
     const columns = useMemo(
         () => [
             {
+                accessorKey: 'name',
                 Header: 'Nom',
                 id: 'Nom',
-                accessorkey: 'name',
             },
             {
+                accessorKey: 'email',
                 Header: 'Email',
                 id: 'Email',
-                accessorkey: 'email',
             },
             {
+                accessorKey: 'role',
                 Header: 'Role',
                 id: 'Role',
-                accessorkey: 'role',
             },
             {
+                accessorKey: 'status',
                 Header: 'Status',
                 id: 'Status',
-                accessorkey: 'status',
             },
         ],[]
     );
@@ -80,7 +80,7 @@ export default function index() {
                                 <button className="px-4 py-2 font-bold text-gray-50 bg-green-500 rounded-sm hover:bg-green-400 focus:outline-none focus:shadow-outline-green">
                                     Ajouter un utilisateur
                                 </button>
-                              <div>
+                              <div className='mt-5'>
                                 <Table columns={columns} data={data} />
                               </div>
                             </div>
