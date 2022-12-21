@@ -5,12 +5,13 @@ export default function index() {
         <div className="px-20">
             <div className=" bg-white rounded-lg pb-4 text-left overflow-hidden  transform transition-all sm:my-8 sm:align-middle sm:w-full">
                 <div className='title border-b-2 py-5 mb-3 text-center'>
-                    <h4 className='font-bold'>Ajouter un pylône</h4>
+                    <h4 className='font-bold'>Ajouter un poste de transformation</h4>
                 </div>
                 <div>
                     <form className='px-4 py-3'>
-                       <Input label='Numéro du pylône' placeholder='Numéro du pylône' />
+                       <Input label='Nom du poste' placeholder='Nom du poste de transformation' />
                        <Input label={'addresse'} placeholder='addresse' />
+                       <Input label={'Puissance nominal'} placeholder='Puissance du poste' />
                        {/* select the city */}
                        <select className='border border-gray-300 rounded-md px-4 py-2 mt-2 mx-4 focus:outline-none focus:border-green-500'>
                             <option value=''>Choisir une ville</option>

@@ -57,11 +57,11 @@ export default function Table({
   })
 
   return (
-    <div className="bg-white p-4">
+    <div className="bg-white p-4 ">
         <DebouncedInput
           value={globalFilter ?? ''}
           onChange={value => setGlobalFilter((value))}
-          className="mt-4 mb-8 w-full border rounded py-2 px-4 bg-gray-50"
+          className="w-full mx-4 mb-4 border border-gray-300 bg-gray-50 rounded-lg px-4 py-2 mt-2 focus:outline-none focus:border-green-500"
           placeholder="Rechercher"
         />
       <table className='w-full relative z-0 table-fixed divide-y divide-gray-200 mx-4'>
